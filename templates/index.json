@@ -59,6 +59,18 @@
     },
     "custom_setction_HrpDGe": {
       "type": "custom-setction",
+      "blocks": {
+        "social_TUeFVr": {
+          "type": "social",
+          "settings": {
+            "text": "facebook",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "social_TUeFVr"
+      ],
       "name": "default custom section",
       "settings": {
         "text": "Social Links"
