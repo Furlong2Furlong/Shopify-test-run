@@ -60,6 +60,13 @@
     "custom_setction_HrpDGe": {
       "type": "custom-setction",
       "blocks": {
+        "social_Kb8Pd6": {
+          "type": "social",
+          "settings": {
+            "text": "Instagram",
+            "url": ""
+          }
+        },
         "social_TUeFVr": {
           "type": "social",
           "settings": {
@@ -69,6 +76,7 @@
         }
       },
       "block_order": [
+        "social_Kb8Pd6",
         "social_TUeFVr"
       ],
       "name": "default custom section",
