@@ -79,12 +79,19 @@
           "settings": {
             "text": "Helleo"
           }
+        },
+        "paragraph_4Kby4a": {
+          "type": "paragraph",
+          "settings": {
+            "text": "fdgdfg"
+          }
         }
       },
       "block_order": [
         "social_ryrpVk",
         "social_daxL9d",
-        "paragraph_3FrAFV"
+        "paragraph_3FrAFV",
+        "paragraph_4Kby4a"
       ],
       "name": "default custom section",
       "settings": {
