@@ -57,6 +57,13 @@
         "show_text_below": false
       }
     },
+    "custom_setction_HrpDGe": {
+      "type": "custom-setction",
+      "name": "default custom section",
+      "settings": {
+        "custom_text": "coding with Furlong"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -220,22 +227,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "custom_setction_HrpDGe": {
-      "type": "custom-setction",
-      "name": "default custom section",
-      "settings": {
-        "custom_text": ""
-      }
     }
   },
   "order": [
     "image_banner",
+    "custom_setction_HrpDGe",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "custom_setction_HrpDGe"
+    "multicolumn"
   ]
 }
