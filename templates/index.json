@@ -61,7 +61,7 @@
       "type": "custom-setction",
       "name": "default custom section",
       "settings": {
-        "custom_text": "coding with Furlong"
+        "text": "Coding with furlong"
       }
     },
     "rich_text": {
