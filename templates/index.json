@@ -60,24 +60,24 @@
     "custom_setction_HrpDGe": {
       "type": "custom-setction",
       "blocks": {
-        "social_Kb8Pd6": {
+        "social_ryrpVk": {
           "type": "social",
           "settings": {
-            "text": "Instagram",
+            "text": "",
             "url": ""
           }
         },
-        "social_TUeFVr": {
+        "social_daxL9d": {
           "type": "social",
           "settings": {
-            "text": "facebook",
+            "text": "FACEBOOK",
             "url": ""
           }
         }
       },
       "block_order": [
-        "social_Kb8Pd6",
-        "social_TUeFVr"
+        "social_ryrpVk",
+        "social_daxL9d"
       ],
       "name": "default custom section",
       "settings": {
