@@ -59,6 +59,18 @@
     },
     "custom_setction_HrpDGe": {
       "type": "custom-setction",
+      "blocks": {
+        "social_efAW3a": {
+          "type": "social",
+          "settings": {
+            "text": "Faccbook",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "social_efAW3a"
+      ],
       "name": "default custom section",
       "settings": {
         "text": "Coding with furlong"
