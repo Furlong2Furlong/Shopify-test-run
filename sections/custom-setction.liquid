@@ -1,4 +1,8 @@
 <h1>{{  section.settings.text }}</h1>
+{% for block in section.blocks %}
+  <a href="{{ block.settings.url }}">{{ block.settings.text }}</a>
+  {% endfor %}
+
 
 {% schema%}
 {
@@ -14,6 +18,21 @@
     "tag": "header",
     "class": "custom-section", 
     "limit" : 1, 
+    "blocks" : [{
+    "name": "custom-block",
+    "type": "social",
+    "settings": [
+   {
+    "type": "text",
+    "id": "text",
+"label": "text" },
+   {
+    "type": "url",
+    "id": "url",
+"label": "url" }
+    ]
+
+  }]
     
   
 }
