@@ -73,11 +73,18 @@
             "text": "FACEBOOK",
             "url": ""
           }
+        },
+        "paragraph_ddCxXN": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Helleo"
+          }
         }
       },
       "block_order": [
         "social_ryrpVk",
-        "social_daxL9d"
+        "social_daxL9d",
+        "paragraph_ddCxXN"
       ],
       "name": "default custom section",
       "settings": {
