@@ -471,6 +471,11 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                  {%- if product.metafields.custom.estimated_shipping_date != blank -%}
+    <div class="pickup-note" style="margin-top: 1rem;">
+      {{ product.metafields.custom.estimated_shipping_date }}
+    </div>
+  {%- endif -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
