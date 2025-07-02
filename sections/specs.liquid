@@ -59,11 +59,25 @@
 
  <style>
   .specs-table-row {
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
 
-  .specs-table-row:last-child {
-    border-bottom: none;
-  }
+.specs-table-row:last-child {
+  border-bottom: none;
+}
+
+.specs-table-row h2 {
+  margin: 0;
+  text-align: right;
+}
+
+.specs-table-row p {
+  margin: 0;
+  text-align: left;
+}
+
 </style>
