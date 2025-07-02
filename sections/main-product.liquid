@@ -473,7 +473,7 @@
                 -%}
                   {%- if product.metafields.custom.estimated_shipping_date != blank -%}
     <div class="pickup-note" style="margin-top: 1rem;">
-      {{ product.metafields.custom.estimated_shipping_date }}
+     <p>{{ product.metafields.custom.estimated_shipping_date }}</p>
     </div>
   {%- endif -%}
               {%- when 'rating' -%}
