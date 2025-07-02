@@ -106,8 +106,8 @@
       "type": "specs",
       "name": "Specs",
       "settings": {
-        "row1lable": "{{ product.metafields.custom.row_1_label.value }}",
-        "row1value": "{{ product.metafields.custom.row_one_value.value }}",
+        "row1lable": "{{ product.metafields.custom.specs_label.value.value.value }}",
+        "row1value": "{{ product.metafields.custom.specs_label.value.label.value }}",
         "row2lable": "",
         "row2value": "",
         "row3lable": "",
