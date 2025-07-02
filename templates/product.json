@@ -106,12 +106,12 @@
       "type": "specs",
       "name": "Specs",
       "settings": {
-        "row1lable": "Michelle",
-        "row1value": "Tennis",
-        "row2lable": "Patrick",
-        "row2value": "Baseball",
-        "row3lable": "Michael",
-        "row3value": "sdfsd"
+        "row1lable": "{{ product.metafields.custom.row_1_label.value }}",
+        "row1value": "{{ product.metafields.custom.row_one_value.value }}",
+        "row2lable": "",
+        "row2value": "",
+        "row3lable": "",
+        "row3value": ""
       }
     }
   },
