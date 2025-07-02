@@ -12,5 +12,16 @@
   "context": {
     "market": "ca"
   },
-  "sections": {}
+  "sections": {
+    "custom_setction_HrpDGe": {
+      "settings": {},
+      "blocks": {
+        "social_ryrpVk": {
+          "settings": {
+            "url": "https://www.michellefurlong.com"
+          }
+        }
+      }
+    }
+  }
 }
