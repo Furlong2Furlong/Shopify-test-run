@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightCol = document.querySelector('.menu-right');
 
     const leftVisible = Array.from(leftCol.querySelectorAll('.menu-item, .menu-subheading')).some(
-      (el) => el.style.display !== 'none'
+      (el) => window.getComputedStyle(el).display !== 'none'
     );
 
     const rightVisible = Array.from(rightCol.querySelectorAll('.menu-item, .menu-subheading')).some(
-      (el) => el.style.display !== 'none'
+      (el) => window.getComputedStyle(el).display !== 'none'
     );
 
     if (leftVisible && !rightVisible) {
@@ -72,6 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Run once on page load to set layout properly if needed
+  // Initial layout check
   updateLayout();
 });
