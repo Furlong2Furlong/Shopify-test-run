@@ -13,10 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
       button.classList.add('active');
 
       items.forEach((item) => {
-        const cat = item.getAttribute('data-category').trim().toLowerCase();
-        console.log('Item category:', cat);
+        const catAttr = item.getAttribute('data-category');
+        const cat = catAttr ? catAttr.trim().toLowerCase() : '';
+
         if (filter === 'all' || cat === filter) {
-          item.style.display = 'block';
+          item.style.display = '';
         } else {
           item.style.display = 'none';
         }
