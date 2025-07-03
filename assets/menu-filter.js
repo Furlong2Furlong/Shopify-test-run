@@ -5,6 +5,39 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('.menu-item');
   const headings = document.querySelectorAll('.menu-subheading');
 
+  function updateLayout() {
+    const leftCol = document.querySelector('.menu-left');
+    const rightCol = document.querySelector('.menu-right');
+
+    const leftVisible = Array.from(leftCol.querySelectorAll('.menu-item, .menu-subheading')).some(
+      (el) => el.style.display !== 'none'
+    );
+
+    const rightVisible = Array.from(rightCol.querySelectorAll('.menu-item, .menu-subheading')).some(
+      (el) => el.style.display !== 'none'
+    );
+
+    if (leftVisible && !rightVisible) {
+      // Only left visible — center it, hide right
+      leftCol.style.width = '100%';
+      leftCol.style.margin = '0 auto';
+      rightCol.style.display = 'none';
+    } else if (!leftVisible && rightVisible) {
+      // Only right visible — center it, hide left
+      rightCol.style.width = '100%';
+      rightCol.style.margin = '0 auto';
+      leftCol.style.display = 'none';
+    } else {
+      // Both or none visible — reset styles
+      leftCol.style.width = '50%';
+      leftCol.style.margin = '';
+      leftCol.style.display = '';
+      rightCol.style.width = '50%';
+      rightCol.style.margin = '';
+      rightCol.style.display = '';
+    }
+  }
+
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const filter = button.getAttribute('data-filter').trim().toLowerCase();
@@ -24,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Also filter headings!
       headings.forEach((heading) => {
         const catAttr = heading.getAttribute('data-category');
         const cat = catAttr ? catAttr.trim().toLowerCase() : '';
@@ -35,6 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
           heading.style.display = 'none';
         }
       });
+
+      updateLayout();
     });
   });
+
+  // Run once on page load to set layout properly if needed
+  updateLayout();
 });
