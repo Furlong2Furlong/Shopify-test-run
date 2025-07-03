@@ -1,0 +1,42 @@
+<div class="split-layout">
+  <div class="split-left">
+    {{ section.settings.left_content }}
+  </div>
+  <div class="split-right">
+    {{ section.settings.right_content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Split Layout",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "left_content",
+      "label": "Left Content"
+    },
+    {
+      "type": "richtext",
+      "id": "right_content",
+      "label": "Right Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split Layout"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.split-layout {
+  display: flex;
+  gap: 2rem;
+}
+.split-left,
+.split-right {
+  width: 50%;
+}
+</style>
