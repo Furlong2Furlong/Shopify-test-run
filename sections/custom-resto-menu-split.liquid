@@ -24,7 +24,7 @@
       {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'left_heading' %}
-          <h3 class="menu-subheading">{{ block.settings.title }}</h3>
+          <h3 class="menu-subheading" data-category="{{ block.settings.category | handle }}">{{ block.settings.title }}</h3>
         {% elsif block.type == 'left_item' %}
           <div class="menu-item" data-category="{{ block.settings.category | handle }}">
             <div class="menu-item-header">
@@ -45,7 +45,7 @@
       {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'right_heading' %}
-          <h3 class="menu-subheading">{{ block.settings.title }}</h3>
+          <h3 class="menu-subheading" data-category="{{ block.settings.category | handle }}" >{{ block.settings.title }}</h3>
         {% elsif block.type == 'right_item' %}
           <div class="menu-item" data-category="{{ block.settings.category | handle }}">
             <div class="menu-item-header">
