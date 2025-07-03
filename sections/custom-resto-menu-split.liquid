@@ -9,7 +9,9 @@
         <h2 class="menu-side-title">{{ section.settings.left_title }}</h2>
       {% endif %}
       {% for block in section.blocks %}
-        {% if block.type == 'left_item' %}
+        {% if block.type == 'left_heading' %}
+          <h3 class="menu-subheading">{{ block.settings.title }}</h3>
+        {% elsif block.type == 'left_item' %}
           <div class="menu-item">
             <div class="menu-item-header">
               <h3 class="menu-item-name">{{ block.settings.name }}</h3>
@@ -28,7 +30,9 @@
         <h2 class="menu-side-title">{{ section.settings.right_title }}</h2>
       {% endif %}
       {% for block in section.blocks %}
-        {% if block.type == 'right_item' %}
+        {% if block.type == 'right_heading' %}
+          <h3 class="menu-subheading">{{ block.settings.title }}</h3>
+        {% elsif block.type == 'right_item' %}
           <div class="menu-item">
             <div class="menu-item-header">
               <h3 class="menu-item-name">{{ block.settings.name }}</h3>
@@ -43,6 +47,7 @@
     </div>
   </div>
 </div>
+
 
 {% schema %}
 {
@@ -85,7 +90,21 @@
         { "type": "text", "id": "price", "label": "Price" },
         { "type": "text", "id": "description", "label": "Description" }
       ]
-    }
+    },{
+  "type": "left_heading",
+  "name": "Left Subheading",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Subheading Title" }
+  ]
+},
+{
+  "type": "right_heading",
+  "name": "Right Subheading",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Subheading Title" }
+  ]
+}
+
   ],
   "presets": [
     {
@@ -169,5 +188,12 @@
   font-size: 0.95rem;
   margin-top: 0.3em;
   color: #555;
+}
+.menu-subheading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
 }
 {% endstyle %}
