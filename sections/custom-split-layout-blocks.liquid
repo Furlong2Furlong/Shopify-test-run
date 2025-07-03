@@ -1,0 +1,58 @@
+<div class="split-layout">
+  {% for block in section.blocks %}
+    {% if block.type == 'left' %}
+      <div class="split-left">
+        {{ block.settings.content }}
+      </div>
+    {% elsif block.type == 'right' %}
+      <div class="split-right">
+        {{ block.settings.content }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% schema %}
+{
+  "name": "Split Layout With Blocks",
+  "max_blocks": 2,
+  "blocks": [
+    {
+      "type": "left",
+      "name": "Left Side",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Left Content"
+        }
+      ]
+    },
+    {
+      "type": "right",
+      "name": "Right Side",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Right Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split Layout"
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+.split-layout {
+  display: flex;
+  gap: 2rem;
+}
+.split-left,
+.split-right {
+  width: 50%;
+}
+{% endstyle %}
