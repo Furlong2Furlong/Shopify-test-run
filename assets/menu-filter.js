@@ -6,13 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
+      const filter = button.getAttribute('data-filter').trim().toLowerCase();
+      console.log('Filtering by:', filter);
 
       buttons.forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
 
       items.forEach((item) => {
-        const cat = item.getAttribute('data-category').toLowerCase();
+        const cat = item.getAttribute('data-category').trim().toLowerCase();
+        console.log('Item category:', cat);
         if (filter === 'all' || cat === filter) {
           item.style.display = 'block';
         } else {
