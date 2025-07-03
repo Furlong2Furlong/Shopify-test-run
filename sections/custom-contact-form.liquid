@@ -21,39 +21,7 @@
         {% endfor %}
     
 
-      <div>
-        <label for="last_name">Last Name</label>
-    <input type="text" name="contact[last_name]" id="last_name"  placeholder="enter your last name" value="{% if form.last_name %}{{form.last_name}}{% endif %}">
-    </div>
-      <div>
-        <label for="email">email</label>
-    <input type="text" name="contact[email]" id="email"  placeholder="Email@email.com" value="{% if form.email %}{{form.email}}{% endif %}">
-    </div>
-      <div>
-        <label for="order_number">order number</label>
-    <input type="text" name="contact[order_number]" id="order_number"  placeholder="order number" value="{% if form.order_number %}{{form.order_number}}{% endif %}">
-    </div>
-      <div>
-        <label for="order_type">order type</label>
-    <select name="contact[order_type]" id="order_type" >
-        <option {%  if form.order_type == "product"%}selected{% endif %} value="product">Product</option>
-        <option {%  if form.order_type == "service"%}selected{% endif %}value="service">service</option>
-    </select>
-    </div>
-  <div>
-        <label for="message">message</label>
-    <textarea type="text" name="contact[message]" id="message" required placeholder="type our message"></textarea>
-    </div>
-    <div>
-       
-      <input type="checkbox" name="contact[extra_info]" id="extra_info"  {% if form.extra_info %}checked{% endif %}>
-      <label for="extra_info">Hotsauce</label>
-    </div>
-
-    <div>
-        <button type="submit">contact us</button>
-    </div>
-
+      
     
   
 {% endform %} 
@@ -113,7 +81,41 @@
                 }, 
                 
             ]
-        }
+        },{
+  "name": "Checkbox",
+  "type": "checkbox",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label (shown next to checkbox)"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Checkbox name (used for form submission)"
+    },
+    {
+      "type": "text",
+      "id": "id",
+      "label": "Checkbox ID",
+      "default": "checkbox_field"
+    },
+    {
+      "type": "text",
+      "id": "value",
+      "label": "Value when checked",
+      "default": "yes"
+    },
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Required?",
+      "default": false
+    }
+  ]
+}
+
     ],
     "presets": [ {
         "name": "Custom Contact Form"
