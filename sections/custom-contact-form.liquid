@@ -14,21 +14,21 @@
     </div>
       <div>
         <label for="last_name">Last Name</label>
-    <input type="text" name="contact[last_name]" id="last_name"  placeholder="enter your last name">
+    <input type="text" name="contact[last_name]" id="last_name"  placeholder="enter your last name" value="{% if form.last_name %}{{form.last_name}}{% endif %}">
     </div>
       <div>
         <label for="email">email</label>
-    <input type="text" name="contact[email]" id="email"  placeholder="Email@email.com">
+    <input type="text" name="contact[email]" id="email"  placeholder="Email@email.com" value="{% if form.email %}{{form.email}}{% endif %}">
     </div>
       <div>
         <label for="order_number">order number</label>
-    <input type="text" name="contact[order_number]" id="order_number"  placeholder="order number">
+    <input type="text" name="contact[order_number]" id="order_number"  placeholder="order number" value="{% if form.order_number %}{{form.order_number}}{% endif %}">
     </div>
       <div>
         <label for="order_type">order type</label>
     <select name="contact[order_type]" id="order_type" >
-        <option selected value="product">Product</option>
-        <option value="service">bulc order</option>
+        <option {%  if form.order_type == "product"%}selected{% endif %} value="product">Product</option>
+        <option {%  if form.order_type == "service"%}selected{% endif %}value="service">service</option>
     </select>
     </div>
   <div>
@@ -37,7 +37,7 @@
     </div>
     <div>
        
-      <input type="checkbox" name="contact[extra_info]" id="extra_info" value="yes">
+      <input type="checkbox" name="contact[extra_info]" id="extra_info"  {% if form.extra_info %}checked{% endif %}>
       <label for="extra_info">Hotsauce</label>
     </div>
 
