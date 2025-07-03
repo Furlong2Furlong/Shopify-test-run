@@ -43,6 +43,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/sample-normal-wax.png",
         "image_overlay_opacity": 40,
