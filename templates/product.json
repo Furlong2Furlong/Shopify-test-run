@@ -105,19 +105,30 @@
     "specs_j3bFD8": {
       "type": "specs",
       "name": "Specs",
-      "settings": {
-        "row1lable": "{{ product.metafields.custom.specs_label.value.value.value }}",
-        "row1value": "{{ product.metafields.custom.specs_label.value.label.value }}",
-        "row2lable": "",
-        "row2value": "",
-        "row3lable": "",
-        "row3value": ""
-      }
+      "settings": {}
+    },
+    "specs_k3Yyk6": {
+      "type": "specs",
+      "blocks": {
+        "specs_row_dTeLjp": {
+          "type": "specs_row",
+          "settings": {
+            "label": "Hieght:",
+            "value": "80$"
+          }
+        }
+      },
+      "block_order": [
+        "specs_row_dTeLjp"
+      ],
+      "name": "Specs Blocks",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "related-products",
-    "specs_j3bFD8"
+    "specs_j3bFD8",
+    "specs_k3Yyk6"
   ]
 }
