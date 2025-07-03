@@ -22,11 +22,11 @@
         "input_RdHrT9": {
           "type": "input",
           "settings": {
-            "name": "order",
-            "placeholder": "choose",
-            "label": "Pizza",
+            "name": "message",
+            "placeholder": "Write your message",
+            "label": "Write you message here:",
             "id": "text",
-            "type": "order"
+            "type": "textarea"
           }
         }
       },
@@ -35,7 +35,8 @@
       ],
       "name": "Custom Contact Form",
       "settings": {
-        "heading": ""
+        "heading": "",
+        "help": "Add blocks below to create custom fields like email, name, phone number, etc. Choose a type from the dropdown."
       }
     }
   },
