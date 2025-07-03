@@ -261,19 +261,29 @@
             "category": "Pizza"
           }
         },
-        "menu_item_p6E6z9": {
+        "menu_item_CER7xP": {
           "type": "menu_item",
           "settings": {
-            "name": "Chianti",
-            "price": "$9",
-            "description": "Red wine from Tuscany.",
-            "category": "Wine"
+            "name": "sdfsdf",
+            "price": "sdf",
+            "description": "sdfsdfsdfs",
+            "category": "wine"
+          }
+        },
+        "menu_item_yxDaGB": {
+          "type": "menu_item",
+          "settings": {
+            "name": "",
+            "price": "",
+            "description": "",
+            "category": "Pizza"
           }
         }
       },
       "block_order": [
         "menu_item_AUFEVi",
-        "menu_item_p6E6z9"
+        "menu_item_CER7xP",
+        "menu_item_yxDaGB"
       ],
       "name": "Filterable Menu",
       "settings": {}
