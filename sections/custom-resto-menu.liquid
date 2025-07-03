@@ -1,86 +1,49 @@
-{% if section.settings.heading %}
-  <h2>{{ section.settings.heading }}</h2>
+{% if section.settings.category %}
+  <h2>{{ section.settings.category }}</h2>
 {% endif %}
 
-<div class="menu">
+<div class="menu-category">
   {% for block in section.blocks %}
-    {% if block.type == "menu_item" %}
-      <div class="menu-item">
-        <div class="menu-item-header">
-          <h3>{{ block.settings.name }}</h3>
-          <span class="price">{{ block.settings.price }}</span>
-        </div>
-        {% if block.settings.description != blank %}
-          <p class="description">{{ block.settings.description }}</p>
-        {% endif %}
-      </div>
-    {% endif %}
+    <div class="menu-item">
+      <h3>{{ block.settings.name }}</h3>
+      <span>{{ block.settings.price }}</span>
+      <p>{{ block.settings.description }}</p>
+    </div>
   {% endfor %}
 </div>
+
 {% schema %}
 {
-  "name": "Restaurant Menu",
+  "name": "Menu Category",
   "settings": [
     {
       "type": "text",
-      "id": "heading",
-      "label": "Menu Heading",
-      "default": "Our Menu"
+      "id": "category",
+      "label": "Category Title (e.g. Wine, Pizza)",
+      "default": "Pizza"
     }
   ],
   "blocks": [
     {
-      "type": "menu_item",
+      "type": "item",
       "name": "Menu Item",
       "settings": [
-        {
-          "type": "text",
-          "id": "name",
-          "label": "Dish / Wine Name",
-          "default": "Margherita Pizza"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Description",
-          "default": "Classic tomato and mozzarella pizza with fresh basil"
-        },
-        {
-          "type": "text",
-          "id": "price",
-          "label": "Price",
-          "default": "$12"
-        }
+        { "type": "text", "id": "name", "label": "Item Name" },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "text", "id": "description", "label": "Description" }
       ]
     }
   ],
-  "max_blocks": 50,
   "presets": [
     {
-      "name": "Restaurant Menu",
-      "category": "Custom",
+      "name": "Pizza Menu",
+      "category": "Restaurant",
+      "settings": {
+        "category": "Pizza"
+      },
       "blocks": [
-        {
-          "type": "menu_item",
-          "settings": {
-            "name": "Margherita Pizza",
-            "price": "$12"
-          }
-        },
-        {
-          "type": "menu_item",
-          "settings": {
-            "name": "Pepperoni Pizza",
-            "price": "$14"
-          }
-        },
-        {
-          "type": "menu_item",
-          "settings": {
-            "name": "Chianti Red Wine",
-            "price": "$8"
-          }
-        }
+        { "type": "item", "settings": { "name": "Margherita", "price": "$12" }},
+        { "type": "item", "settings": { "name": "Pepperoni", "price": "$14" }}
       ]
     }
   ]
