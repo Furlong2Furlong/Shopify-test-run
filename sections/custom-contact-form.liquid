@@ -1,5 +1,5 @@
 <h2>Contact</h2>
-{%  form 'contact' %}
+{%  form 'contact', id: 'ContactForm' %}
       {%- if form.posted_successfully? -%}
         <p>Your message has been sent</p>
      
@@ -10,10 +10,10 @@
     
     <div>
         <label for="first_name">First Name</label>
-    <input type="text" name="contact[fist_name]" id="first_name" required placeholder="Enter your name" value="{% if form.first_name %}{{form.first_name}}{% endif %}">
+    <input type="text" name="contact[first_name]" id="first_name" required placeholder="Enter your name" value="{% if form.first_name %}{{form.first_name}}{% endif %}">
     </div>
       <div>
-        <label for="last_name">email</label>
+        <label for="last_name">Last Name</label>
     <input type="text" name="contact[last_name]" id="last_name" required placeholder="enter your last name">
     </div>
       <div>
