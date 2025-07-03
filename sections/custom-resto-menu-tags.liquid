@@ -4,7 +4,7 @@
     <button data-filter="all" class="active">All</button>
     {% assign unique_categories = '' %}
     {% for block in section.blocks %}
-      {% assign cat = block.settings.category | downcase %}
+      {% assign cat = block.settings.category | handle %}
       {% unless unique_categories contains cat %}
         <button data-filter="{{ cat }}">{{ block.settings.category }}</button>
         {% assign unique_categories = unique_categories | append: cat | append: ',' %}
@@ -14,7 +14,7 @@
 
   <div class="menu-grid">
     {% for block in section.blocks %}
-      <div class="menu-item" data-category="{{ block.settings.category | downcase }}">
+      <div class="menu-item" data-category="{{ block.settings.category | handle }}">
         <div class="menu-item-header">
           <h3 class="menu-item-name">{{ block.settings.name }}</h3>
           <span class="menu-item-price">{{ block.settings.price }}</span>
