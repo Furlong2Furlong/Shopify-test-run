@@ -3,11 +3,19 @@
 {% endif %}
 
 <div class="menu-category">
+  {% if section.settings.category != blank %}
+    <h2 class="menu-category-title">{{ section.settings.category }}</h2>
+  {% endif %}
   {% for block in section.blocks %}
     <div class="menu-item">
-      <h3>{{ block.settings.name }}</h3>
-      <span>{{ block.settings.price }}</span>
-      <p>{{ block.settings.description }}</p>
+    <div class="menu-item-header">
+      <h3 class="menu-item-name">{{ block.settings.name }}</h3>
+      <span class="menu-item-price">{{ block.settings.price }}</span>
+      </div>
+{% if block.settings.description != blank %}
+      <p class="meni-item-description">{{ block.settings.description }}</p>
+  
+    {% endif %}
     </div>
   {% endfor %}
 </div>
@@ -50,3 +58,29 @@
   ]
 }
 {% endschema %}
+
+<style>
+    .menu-item {
+  margin-bottom: 1.5em;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-item-name {
+  margin: 0;
+}
+
+.menu-item-price {
+  font-weight: bold;
+}
+
+.menu-item-description {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+}
+
+</style>
