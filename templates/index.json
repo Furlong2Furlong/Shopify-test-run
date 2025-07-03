@@ -183,12 +183,21 @@
       "settings": {
         "category": "Pizza"
       }
+    },
+    "custom_split_layout_fhqCWH": {
+      "type": "custom-split-layout",
+      "name": "Split Layout",
+      "settings": {
+        "left_content": "<ul><li>Right Content </li></ul>",
+        "right_content": "<p>LEft </p>"
+      }
     }
   },
   "order": [
     "image_banner",
     "custom_resto_menu_3yQV3T",
     "custom_resto_menu_77pTEa",
-    "custom_resto_menu_9dw3W8"
+    "custom_resto_menu_9dw3W8",
+    "custom_split_layout_fhqCWH"
   ]
 }
