@@ -75,24 +75,32 @@
           "settings": {
             "name": "Pepperoni",
             "price": "$14",
-            "description": ""
+            "description": "sdfsdfsdfs"
           }
         },
         "item_rP3Fq9": {
           "type": "item",
           "name": "Meat Ball ",
           "settings": {
-            "name": "",
-            "price": "",
-            "description": ""
+            "name": "meat BAll",
+            "price": "12$",
+            "description": "sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf"
           }
         },
         "item_f6qjwG": {
           "type": "item",
           "settings": {
-            "name": "",
-            "price": "",
-            "description": ""
+            "name": "sdfsdfsdf",
+            "price": "sdfsdf",
+            "description": "sdfsdfs"
+          }
+        },
+        "item_gmpw6e": {
+          "type": "item",
+          "settings": {
+            "name": "sdfsdfsdfs",
+            "price": "12$",
+            "description": "sdfsdfsdfsdf"
           }
         }
       },
@@ -100,7 +108,8 @@
         "item_Y4aLE9",
         "item_LfHjaD",
         "item_rP3Fq9",
-        "item_f6qjwG"
+        "item_f6qjwG",
+        "item_gmpw6e"
       ],
       "name": "Pizza Menu",
       "settings": {
