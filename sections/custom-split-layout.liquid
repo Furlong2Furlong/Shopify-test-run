@@ -1,9 +1,9 @@
 <div class="split-layout">
   <div class="split-left">
-    {{ section.settings.left_content }}
+    {{ section.settings.left_content | default: "Left content here" }}
   </div>
   <div class="split-right">
-    {{ section.settings.right_content }}
+    {{ section.settings.right_content | default: "Right content here" }}
   </div>
 </div>
 
@@ -30,7 +30,7 @@
 }
 {% endschema %}
 
-<style>
+{% style %}
 .split-layout {
   display: flex;
   gap: 2rem;
@@ -39,4 +39,4 @@
 .split-right {
   width: 50%;
 }
-</style>
+{% endstyle %}
