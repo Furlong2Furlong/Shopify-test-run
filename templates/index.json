@@ -208,8 +208,8 @@
       "name": "Main Menu",
       "settings": {
         "category": "Menu",
-        "left_title": "Food",
-        "right_title": "Drinks"
+        "left_title": "",
+        "right_title": ""
       }
     }
   },
