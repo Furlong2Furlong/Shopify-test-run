@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const buttons = document.querySelectorAll('.menu-filters button');
   const items = document.querySelectorAll('.menu-item');
+  const headings = document.querySelectorAll('.menu-subheading');
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
