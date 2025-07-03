@@ -220,38 +220,27 @@
         "right_title": ""
       }
     },
-    "custom_resto_menu_tags_kCHn7z": {
-      "type": "custom-resto-menu-tags",
-      "blocks": {
-        "menu_item_EUix9a": {
-          "type": "menu_item",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": "Tomato, mozzarella, basil.",
-            "category": "Pizza"
-          }
-        },
-        "menu_item_hpnzgx": {
-          "type": "menu_item",
-          "settings": {
-            "name": "Chianti",
-            "price": "$9",
-            "description": "Red wine from Tuscany.",
-            "category": "Wine"
-          }
-        }
-      },
-      "block_order": [
-        "menu_item_EUix9a",
-        "menu_item_hpnzgx"
-      ],
-      "name": "Filterable Menu",
-      "settings": {}
-    },
     "custom_resto_menu_tags_pH87xk": {
       "type": "custom-resto-menu-tags",
       "blocks": {
+        "menu_item_63qGfG": {
+          "type": "menu_item",
+          "settings": {
+            "name": "MArg",
+            "price": "13",
+            "description": "sdfsdfsdfsdf",
+            "category": "Pizza"
+          }
+        },
+        "menu_item_NwCq9x": {
+          "type": "menu_item",
+          "settings": {
+            "name": "sdfsdf",
+            "price": "sdfsdf",
+            "description": "sdfsdf",
+            "category": "wine"
+          }
+        },
         "menu_item_AUFEVi": {
           "type": "menu_item",
           "settings": {
@@ -265,8 +254,8 @@
           "type": "menu_item",
           "settings": {
             "name": "sdfsdf",
-            "price": "sdf",
-            "description": "sdfsdfsdfs",
+            "price": "33$",
+            "description": "sdfsdf",
             "category": "wine"
           }
         },
@@ -281,6 +270,8 @@
         }
       },
       "block_order": [
+        "menu_item_63qGfG",
+        "menu_item_NwCq9x",
         "menu_item_AUFEVi",
         "menu_item_CER7xP",
         "menu_item_yxDaGB"
@@ -293,7 +284,6 @@
     "image_banner",
     "custom_resto_menu_3yQV3T",
     "custom_resto_menu_split_YRUNKB",
-    "custom_resto_menu_tags_kCHn7z",
     "custom_resto_menu_tags_pH87xk"
   ]
 }
