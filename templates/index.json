@@ -136,6 +136,7 @@
         },
         "right_item_JjfVeH": {
           "type": "right_item",
+          "name": "Chianti Vino",
           "settings": {
             "name": "Chianto",
             "price": "65$",
