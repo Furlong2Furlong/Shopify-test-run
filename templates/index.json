@@ -229,7 +229,9 @@
       ],
       "name": "Split Menu Example",
       "settings": {
-        "category": "Pizza & Wines"
+        "category": "MENU",
+        "left_title": "Pizzas",
+        "right_title": "Wines"
       }
     }
   },
