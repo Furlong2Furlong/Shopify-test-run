@@ -48,12 +48,23 @@
             "id": "tel",
             "type": "tel"
           }
+        },
+        "input_iDnX9e": {
+          "type": "input",
+          "settings": {
+            "name": "date",
+            "placeholder": "Date:",
+            "label": "Date:",
+            "id": "date",
+            "type": "date"
+          }
         }
       },
       "block_order": [
         "input_RdHrT9",
         "input_VjnAN6",
-        "input_EYrrPE"
+        "input_EYrrPE",
+        "input_iDnX9e"
       ],
       "name": "Custom Contact Form",
       "settings": {
