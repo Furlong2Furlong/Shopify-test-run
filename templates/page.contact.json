@@ -44,7 +44,7 @@
           "settings": {
             "label": "Email:",
             "placeholder": "message",
-            "name": "Message",
+            "name": "email",
             "id": "email",
             "type": "email"
           }
