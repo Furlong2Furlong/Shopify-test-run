@@ -12,26 +12,5 @@
   "context": {
     "market": "ca"
   },
-  "sections": {
-    "custom_setction_HrpDGe": {
-      "settings": {},
-      "blocks": {
-        "social_ryrpVk": {
-          "settings": {
-            "url": "https://www.michellefurlong.com"
-          }
-        },
-        "paragraph_3FrAFV": {
-          "settings": {
-            "text": "Welcome to my site"
-          }
-        },
-        "paragraph_4Kby4a": {
-          "settings": {
-            "text": "Hello there second"
-          }
-        }
-      }
-    }
-  }
+  "sections": {}
 }
