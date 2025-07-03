@@ -104,6 +104,18 @@
     },
     "specs_j3bFD8": {
       "type": "specs",
+      "blocks": {
+        "specs_row_gN6Qaf": {
+          "type": "specs_row",
+          "settings": {
+            "label": "",
+            "value": ""
+          }
+        }
+      },
+      "block_order": [
+        "specs_row_gN6Qaf"
+      ],
       "name": "Specs",
       "settings": {}
     },
@@ -116,10 +128,18 @@
             "label": "Hieght:",
             "value": "80$"
           }
+        },
+        "specs_row_yyUyAH": {
+          "type": "specs_row",
+          "settings": {
+            "label": "Dimention:",
+            "value": "# Dementional"
+          }
         }
       },
       "block_order": [
-        "specs_row_dTeLjp"
+        "specs_row_dTeLjp",
+        "specs_row_yyUyAH"
       ],
       "name": "Specs Blocks",
       "settings": {}
