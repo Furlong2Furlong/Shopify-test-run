@@ -56,9 +56,80 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "custom_resto_menu_3yQV3T": {
+      "type": "custom-resto-menu",
+      "blocks": {
+        "item_Y4aLE9": {
+          "type": "item",
+          "name": "Margarita",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": "alsdkfasldkjflkasdjflkjasldkjf"
+          }
+        },
+        "item_LfHjaD": {
+          "type": "item",
+          "name": "Pepperoni",
+          "settings": {
+            "name": "Pepperoni",
+            "price": "$14",
+            "description": ""
+          }
+        },
+        "item_rP3Fq9": {
+          "type": "item",
+          "settings": {
+            "name": "",
+            "price": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_Y4aLE9",
+        "item_LfHjaD",
+        "item_rP3Fq9"
+      ],
+      "name": "Pizza Menu",
+      "settings": {
+        "category": "Pizza"
+      }
+    },
+    "custom_resto_menu_77pTEa": {
+      "type": "custom-resto-menu",
+      "blocks": {
+        "item_9xL8wi": {
+          "type": "item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": ""
+          }
+        },
+        "item_tBjMJx": {
+          "type": "item",
+          "settings": {
+            "name": "Pepperoni",
+            "price": "$14",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_9xL8wi",
+        "item_tBjMJx"
+      ],
+      "name": "Wines",
+      "settings": {
+        "category": "Wine"
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "custom_resto_menu_3yQV3T",
+    "custom_resto_menu_77pTEa"
   ]
 }
