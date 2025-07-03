@@ -57,75 +57,6 @@
         "show_text_below": false
       }
     },
-    "custom_resto_menu_3yQV3T": {
-      "type": "custom-resto-menu",
-      "blocks": {
-        "item_Y4aLE9": {
-          "type": "item",
-          "name": "Margarita",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": "alsdkfasldkjflkasdjflkjasldkjf"
-          }
-        },
-        "item_LfHjaD": {
-          "type": "item",
-          "name": "Pepperoni",
-          "settings": {
-            "name": "Pepperoni",
-            "price": "$14",
-            "description": "sdfsdfsdfs"
-          }
-        },
-        "item_rP3Fq9": {
-          "type": "item",
-          "name": "Meat Ball ",
-          "settings": {
-            "name": "meat BAll",
-            "price": "12$",
-            "description": "sdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf"
-          }
-        },
-        "item_f6qjwG": {
-          "type": "item",
-          "settings": {
-            "name": "sdfsdfsdf",
-            "price": "sdfsdf",
-            "description": "sdfsdfs"
-          }
-        },
-        "item_gmpw6e": {
-          "type": "item",
-          "settings": {
-            "name": "sdfsdfsdfs",
-            "price": "12$",
-            "description": "sdfsdfsdfsdf"
-          }
-        },
-        "item_nmFr36": {
-          "type": "item",
-          "settings": {
-            "name": "sdfsdfs",
-            "price": "sdfsdf",
-            "description": "sdfsdf"
-          }
-        }
-      },
-      "block_order": [
-        "item_Y4aLE9",
-        "item_LfHjaD",
-        "item_rP3Fq9",
-        "item_f6qjwG",
-        "item_gmpw6e",
-        "item_nmFr36"
-      ],
-      "disabled": true,
-      "name": "Pizza Menu",
-      "settings": {
-        "category": "Pizza"
-      }
-    },
     "custom_resto_menu_split_YRUNKB": {
       "type": "custom-resto-menu-split",
       "blocks": {
@@ -171,7 +102,7 @@
           "name": "Entree",
           "settings": {
             "title": "Entree",
-            "category": "Pizza"
+            "category": "Entree"
           }
         },
         "left_item_NJfbiL": {
@@ -232,7 +163,6 @@
   },
   "order": [
     "image_banner",
-    "custom_resto_menu_3yQV3T",
     "custom_resto_menu_split_YRUNKB"
   ]
 }
