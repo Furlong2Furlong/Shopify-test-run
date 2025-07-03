@@ -1,16 +1,16 @@
 <div class="menu-wrapper">
 
-  <div class="menu-filters">
-    <button data-filter="all" class="active">All</button>
-    {% assign unique_categories = '' %}
-    {% for block in section.blocks %}
-      {% assign cat = block.settings.category | handle %}
-      {% unless unique_categories contains cat %}
-        <button data-filter="{{ cat }}">{{ block.settings.category }}</button>
-        {% assign unique_categories = unique_categories | append: cat | append: ',' %}
-      {% endunless %}
-    {% endfor %}
-  </div>
+<div class="menu-filters">
+  <button data-filter="all" class="active">All</button>
+  {% capture seen_categories %}|all|{% endcapture %}
+  {% for block in section.blocks %}
+    {% assign cat_handle = block.settings.category | handle %}
+    {% unless seen_categories contains cat_handle %}
+      <button data-filter="{{ cat_handle }}">{{ block.settings.category }}</button>
+      {% capture seen_categories %}{{ seen_categories }}{{ cat_handle }}|{% endcapture %}
+    {% endunless %}
+  {% endfor %}
+</div>
 
   <div class="menu-grid">
     {% for block in section.blocks %}
