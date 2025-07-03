@@ -1,60 +1,40 @@
 <div class="width">
     <div class="specs-table">
+       {%  for block in section.blocks %}
         <div class="specs-table-row">
-            <h2>{{  section.settings.row1lable }}</h2>
-            <p> {{ section.settings.row1value }}</p>
+            <h2>{{ block.settings.label }}</h2>
+            <p>{{ block.settings.value }}</p>
         </div>
-        <div class="specs-table-row">
-            <h2>{{ section.settings.row2lable }}</h2>
-            <p> {{ section.settings.row2value }}</p>
-        </div>
-        <div class="specs-table-row">
-            <h2> {{ section.settings.row3lable }}</h2>
-             <p> {{ section.settings.row3value }}</p>
-        </div>
+       {% endfor %}
     </div>
 </div> 
 
  {% schema %}
- {
+ {  
     "name": "specs",
-    "settings": [
-        {
-            "type": "text",
-            "id": "row1lable",
-            "label": "Row 1 Label"
-        },
-          {
-            "type": "text",
-            "id": "row1value",
-            "label": "Row 1 Value"
-        },
-          {
-            "type": "text",
-            "id": "row2lable",
-            "label": "Row 2 Label"
-        },  {
-            "type": "text",
-            "id": "row2value",
-            "label": "Row 2 value"
-        },  {
-            "type": "text",
-            "id": "row3lable",
-            "label": "Row 3 Label"
-        },  {
-            "type": "text",
-            "id": "row3value",
-            "label": "Row 3 value"
-        }, 
-      
+    "blocks": [
+        { 
+            "type": "specs_row",
+            "name": "Specs Row",
+            "settings": [
+                {
+                "type": "text", 
+                "id": "label",
+                "label": "Label"},
+                {
+                "type": "text",
+                "id": "value",
+                "label": "Value"}
+            ]
+        }
     ], 
     "presets": [
         {
-            "name": "Specs",
-            "category": "Custom"
+            "name": "Specs Blocks"
         }
     ]
-}
+} 
+   
  {% endschema %}
 
  <style>
