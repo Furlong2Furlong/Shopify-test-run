@@ -64,7 +64,12 @@
         {"type": "text",
             "label": "Heading text",
             "id": "heading",
-        }
+        },  {
+      "type": "text",
+      "id": "help",
+      "label": "Instructions",
+      "default": "Add blocks below to create custom fields like email, name, phone number, etc. Choose a type from the dropdown."
+    }
 
     ],
     "blocks": [
@@ -92,9 +97,18 @@
                     "id": "id",
                     "label": "Id"
                 }, {
-                    "type": "text",
+                    "type": "select",
                     "id": "type",
-                    "label": "Type"
+                    "label": "Input Type",
+                    "default": "text",
+                    "options": [
+                           { "value": "text", "label": "Text" },
+            { "value": "email", "label": "Email" },
+            { "value": "tel", "label": "Phone Number" },
+            { "value": "number", "label": "Number" },
+            { "value": "url", "label": "Website URL" },
+            { "value": "date", "label": "Date" }
+                    ]
                 }, 
                 
             ]
