@@ -213,25 +213,66 @@
             "description": "classic pizza"
           }
         },
-        "right_item_aP3cnH": {
+        "right_item_hQA8DY": {
+          "type": "right_item",
+          "name": "Vino",
+          "settings": {
+            "name": "Vino",
+            "price": "10$",
+            "description": "sdfsdfsdf"
+          }
+        },
+        "right_item_trk7Nc": {
           "type": "right_item",
           "settings": {
-            "name": "Chianti",
-            "price": "$9",
-            "description": "Dry red wine from Tuscany."
+            "name": "sdlfsdljfs",
+            "price": "20$",
+            "description": "sdfsdfsdf"
+          }
+        },
+        "right_item_Ya8NVd": {
+          "type": "right_item",
+          "settings": {
+            "name": "chianti",
+            "price": "30$",
+            "description": "sdfsdfsdf"
           }
         }
       },
       "block_order": [
         "left_item_YiznN9",
         "left_item_YdnjGd",
-        "right_item_aP3cnH"
+        "right_item_hQA8DY",
+        "right_item_trk7Nc",
+        "right_item_Ya8NVd"
       ],
       "name": "Split Menu Example",
       "settings": {
         "category": "MENU",
-        "left_title": "Pizzas",
+        "left_title": "Entrees",
         "right_title": "Wines"
+      }
+    },
+    "custom_resto_menu_split_6PTcnN": {
+      "type": "custom-resto-menu-split",
+      "blocks": {
+        "left_item_qqgPR3": {
+          "type": "left_item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": "Classic tomato and mozzarella."
+          }
+        }
+      },
+      "block_order": [
+        "left_item_qqgPR3"
+      ],
+      "name": "Split Menu Example",
+      "settings": {
+        "category": "",
+        "left_title": "PIZZA",
+        "right_title": ""
       }
     }
   },
@@ -241,6 +282,7 @@
     "custom_resto_menu_77pTEa",
     "custom_resto_menu_9dw3W8",
     "custom_split_layout_fhqCWH",
-    "custom_resto_menu_split_cjQ6t9"
+    "custom_resto_menu_split_cjQ6t9",
+    "custom_resto_menu_split_6PTcnN"
   ]
 }
