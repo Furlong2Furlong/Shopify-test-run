@@ -177,6 +177,13 @@
             "description": "sd salade green anchovies sjdksldkfj"
           }
         },
+        "right_heading_7KQcfU": {
+          "type": "right_heading",
+          "name": "Wine",
+          "settings": {
+            "title": "Wines"
+          }
+        },
         "right_item_6zTEjB": {
           "type": "right_item",
           "name": "Chianti",
@@ -202,6 +209,7 @@
         "left_item_LHhjEe",
         "left_heading_CWcAVm",
         "left_item_NJfbiL",
+        "right_heading_7KQcfU",
         "right_item_6zTEjB",
         "right_item_JjfVeH"
       ],
