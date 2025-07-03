@@ -248,12 +248,42 @@
       ],
       "name": "Filterable Menu",
       "settings": {}
+    },
+    "custom_resto_menu_tags_pH87xk": {
+      "type": "custom-resto-menu-tags",
+      "blocks": {
+        "menu_item_AUFEVi": {
+          "type": "menu_item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": "Tomato, mozzarella, basil.",
+            "category": "Pizza"
+          }
+        },
+        "menu_item_p6E6z9": {
+          "type": "menu_item",
+          "settings": {
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Red wine from Tuscany.",
+            "category": "Wine"
+          }
+        }
+      },
+      "block_order": [
+        "menu_item_AUFEVi",
+        "menu_item_p6E6z9"
+      ],
+      "name": "Filterable Menu",
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "custom_resto_menu_3yQV3T",
     "custom_resto_menu_split_YRUNKB",
-    "custom_resto_menu_tags_kCHn7z"
+    "custom_resto_menu_tags_kCHn7z",
+    "custom_resto_menu_tags_pH87xk"
   ]
 }
