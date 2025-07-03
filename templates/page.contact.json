@@ -19,16 +19,6 @@
     "custom_contact_form_qHEXEb": {
       "type": "custom-contact-form",
       "blocks": {
-        "input_RdHrT9": {
-          "type": "input",
-          "settings": {
-            "name": "message",
-            "placeholder": "Write your message",
-            "label": "Write you message here:",
-            "id": "text",
-            "type": "textarea"
-          }
-        },
         "input_VjnAN6": {
           "type": "input",
           "settings": {
@@ -58,17 +48,27 @@
             "id": "date",
             "type": "date"
           }
+        },
+        "input_RdHrT9": {
+          "type": "input",
+          "settings": {
+            "name": "message",
+            "placeholder": "Write your message",
+            "label": "Write you message here:",
+            "id": "text",
+            "type": "textarea"
+          }
         }
       },
       "block_order": [
-        "input_RdHrT9",
         "input_VjnAN6",
         "input_EYrrPE",
-        "input_iDnX9e"
+        "input_iDnX9e",
+        "input_RdHrT9"
       ],
       "name": "Custom Contact Form",
       "settings": {
-        "heading": "",
+        "heading": "ORDER FORM",
         "help": "Add blocks below to create custom fields like email, name, phone number, etc. Choose a type from the dropdown."
       }
     }
