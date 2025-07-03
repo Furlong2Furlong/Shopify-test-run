@@ -1,6 +1,13 @@
 <h2>Contact</h2>
 {%  form 'contact' %}
+      {%- if form.posted_successfully? -%}
+        <p>Your message has been sent</p>
+     
+  
+      {%- elsif form.errors -%}
     {{ form.errors | default_errors }}
+      {%- endif -%}
+    
     <div>
         <label for="first_name">First Name</label>
     <input type="text" name="contact[fist_name]" id="first_name" required placeholder="Enter your name">
@@ -29,7 +36,7 @@
     <textarea type="text" name="contact[message]" id="message" required placeholder="type our message"></textarea>
     </div>
     <div>
-        <p>Extra info</p>
+       
       <input type="checkbox" name="contact[extra_info]" id="extra_info" value="yes">
       <label for="extra_info">Hotsauce</label>
     </div>
