@@ -86,12 +86,21 @@
             "price": "",
             "description": ""
           }
+        },
+        "item_f6qjwG": {
+          "type": "item",
+          "settings": {
+            "name": "",
+            "price": "",
+            "description": ""
+          }
         }
       },
       "block_order": [
         "item_Y4aLE9",
         "item_LfHjaD",
-        "item_rP3Fq9"
+        "item_rP3Fq9",
+        "item_f6qjwG"
       ],
       "name": "Pizza Menu",
       "settings": {
