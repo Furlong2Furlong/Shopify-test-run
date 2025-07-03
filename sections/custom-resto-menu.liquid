@@ -60,27 +60,16 @@
 {% endschema %}
 
 <style>
-    .menu-item {
-  margin-bottom: 1.5em;
+.menu-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
 }
 
-.menu-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.menu-item {
+  /* optional styling */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
 }
-
-.menu-item-name {
-  margin: 0;
-}
-
-.menu-item-price {
-  font-weight: bold;
-}
-
-.menu-item-description {
-  margin-top: 0.3em;
-  margin-bottom: 0;
-}
-
 </style>
