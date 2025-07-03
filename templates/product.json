@@ -135,11 +135,19 @@
             "label": "Dimention:",
             "value": "# Dementional"
           }
+        },
+        "specs_row_pP3CQQ": {
+          "type": "specs_row",
+          "settings": {
+            "label": "Distance:",
+            "value": "15 KM"
+          }
         }
       },
       "block_order": [
         "specs_row_dTeLjp",
-        "specs_row_yyUyAH"
+        "specs_row_yyUyAH",
+        "specs_row_pP3CQQ"
       ],
       "name": "Specs Blocks",
       "settings": {}
