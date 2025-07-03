@@ -60,6 +60,24 @@
     "custom_resto_menu_split_YRUNKB": {
       "type": "custom-resto-menu-split",
       "blocks": {
+        "left_heading_CWcAVm": {
+          "type": "left_heading",
+          "name": "Entree",
+          "settings": {
+            "title": "Entree",
+            "category": "Entree"
+          }
+        },
+        "left_item_NJfbiL": {
+          "type": "left_item",
+          "name": "Ceasar Salade",
+          "settings": {
+            "name": "Ceasar Salade",
+            "price": "10$",
+            "description": "sd salade green anchovies sjdksldkfj",
+            "category": "entree"
+          }
+        },
         "left_heading_DUPdMY": {
           "type": "left_heading",
           "name": "Pizza",
@@ -98,23 +116,6 @@
             "category": "Pizza"
           }
         },
-        "left_heading_CWcAVm": {
-          "type": "left_heading",
-          "name": "Entree",
-          "settings": {
-            "title": "Entree",
-            "category": "Entree"
-          }
-        },
-        "left_item_NJfbiL": {
-          "type": "left_item",
-          "settings": {
-            "name": "Ceasar Salade",
-            "price": "10$",
-            "description": "sd salade green anchovies sjdksldkfj",
-            "category": "entree"
-          }
-        },
         "right_heading_7KQcfU": {
           "type": "right_heading",
           "name": "Wine",
@@ -144,12 +145,12 @@
         }
       },
       "block_order": [
+        "left_heading_CWcAVm",
+        "left_item_NJfbiL",
         "left_heading_DUPdMY",
         "left_item_xqXNDt",
         "left_item_Pd7bTR",
         "left_item_LHhjEe",
-        "left_heading_CWcAVm",
-        "left_item_NJfbiL",
         "right_heading_7KQcfU",
         "right_item_6zTEjB",
         "right_item_JjfVeH"
