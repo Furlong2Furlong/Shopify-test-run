@@ -102,23 +102,6 @@
         "padding_bottom": 28
       }
     },
-    "specs_j3bFD8": {
-      "type": "specs",
-      "blocks": {
-        "specs_row_gN6Qaf": {
-          "type": "specs_row",
-          "settings": {
-            "label": "",
-            "value": ""
-          }
-        }
-      },
-      "block_order": [
-        "specs_row_gN6Qaf"
-      ],
-      "name": "Specs",
-      "settings": {}
-    },
     "specs_k3Yyk6": {
       "type": "specs",
       "blocks": {
@@ -141,7 +124,6 @@
   "order": [
     "main",
     "related-products",
-    "specs_j3bFD8",
     "specs_k3Yyk6"
   ]
 }
