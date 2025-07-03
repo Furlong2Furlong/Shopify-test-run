@@ -18,8 +18,25 @@
     },
     "custom_contact_form_qHEXEb": {
       "type": "custom-contact-form",
+      "blocks": {
+        "input_RdHrT9": {
+          "type": "input",
+          "settings": {
+            "name": "order",
+            "placeholder": "choose",
+            "label": "Pizza",
+            "id": "pizza",
+            "type": "order"
+          }
+        }
+      },
+      "block_order": [
+        "input_RdHrT9"
+      ],
       "name": "Custom Contact Form",
-      "settings": {}
+      "settings": {
+        "heading": ""
+      }
     }
   },
   "order": [
