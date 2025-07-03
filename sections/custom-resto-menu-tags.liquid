@@ -1,0 +1,156 @@
+<div class="menu-wrapper">
+
+  <div class="menu-filters">
+    <button data-filter="all" class="active">All</button>
+    {% assign unique_categories = '' %}
+    {% for block in section.blocks %}
+      {% assign cat = block.settings.category | downcase %}
+      {% unless unique_categories contains cat %}
+        <button data-filter="{{ cat }}">{{ block.settings.category }}</button>
+        {% assign unique_categories = unique_categories | append: cat | append: ',' %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <div class="menu-grid">
+    {% for block in section.blocks %}
+      <div class="menu-item" data-category="{{ block.settings.category | downcase }}">
+        <div class="menu-item-header">
+          <h3 class="menu-item-name">{{ block.settings.name }}</h3>
+          <span class="menu-item-price">{{ block.settings.price }}</span>
+        </div>
+        {% if block.settings.description != blank %}
+          <p class="menu-item-description">{{ block.settings.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Filterable Menu",
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Menu Item",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Item Name" },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "text", "id": "description", "label": "Description" },
+        { "type": "text", "id": "category", "label": "Category", "default": "Pizza" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filterable Menu",
+      "category": "Restaurant",
+      "blocks": [
+        {
+          "type": "menu_item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": "Tomato, mozzarella, basil.",
+            "category": "Pizza"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Red wine from Tuscany.",
+            "category": "Wine"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+{% endschema %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('.menu-filters button');
+    const items = document.querySelectorAll('.menu-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        items.forEach(item => {
+          const cat = item.getAttribute('data-category').toLowerCase();
+          if (filter === 'all' || cat === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% style %}
+
+.menu-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-filters button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.menu-filters button.active {
+  background: black;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.menu-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.menu-item-price {
+  font-weight: bold;
+}
+
+.menu-item-description {
+  color: #555;
+  font-size: 0.95rem;
+}
+{% endstyle %}
