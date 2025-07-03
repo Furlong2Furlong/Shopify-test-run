@@ -5,6 +5,9 @@
 
   <div class="menu-split">
     <div class="menu-left">
+      {% if section.settings.left_title != blank %}
+        <h2 class="menu-side-title">{{ section.settings.left_title }}</h2>
+      {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'left_item' %}
           <div class="menu-item">
@@ -21,6 +24,9 @@
     </div>
 
     <div class="menu-right">
+      {% if section.settings.right_title != blank %}
+        <h2 class="menu-side-title">{{ section.settings.right_title }}</h2>
+      {% endif %}
       {% for block in section.blocks %}
         {% if block.type == 'right_item' %}
           <div class="menu-item">
@@ -37,6 +43,7 @@
     </div>
   </div>
 </div>
+
 {% schema %}
 {
   "name": "Split Menu Section",
@@ -44,9 +51,20 @@
     {
       "type": "text",
       "id": "category",
-      "label": "Section Title",
-      "default": "Menu",
-      "info": "💡 Appears above both columns."
+      "label": "Main Section Title",
+      "default": "Our Menu"
+    },
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Left Column Title",
+      "default": "Pizzas"
+    },
+    {
+      "type": "text",
+      "id": "right_title",
+      "label": "Right Column Title",
+      "default": "Wines"
     }
   ],
   "blocks": [
@@ -74,7 +92,9 @@
       "name": "Split Menu Example",
       "category": "Restaurant",
       "settings": {
-        "category": "Wines & Pizzas"
+        "category": "Wines & Pizzas",
+        "left_title": "Pizzas",
+        "right_title": "Wines"
       },
       "blocks": [
         {
@@ -90,6 +110,7 @@
   ]
 }
 {% endschema %}
+
 {% style %}
 .menu-wrapper {
   width: 90%;
@@ -111,6 +132,13 @@
 .menu-left,
 .menu-right {
   width: 50%;
+}
+
+.menu-side-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
 }
 
 .menu-item {
