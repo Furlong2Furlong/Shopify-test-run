@@ -120,176 +120,90 @@
         "item_gmpw6e",
         "item_nmFr36"
       ],
+      "disabled": true,
       "name": "Pizza Menu",
       "settings": {
         "category": "Pizza"
       }
     },
-    "custom_resto_menu_77pTEa": {
-      "type": "custom-resto-menu",
-      "blocks": {
-        "item_9xL8wi": {
-          "type": "item",
-          "name": "chocolate cake",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": "sdfsdfsdfsdfsf"
-          }
-        },
-        "item_tBjMJx": {
-          "type": "item",
-          "settings": {
-            "name": "Pepperoni",
-            "price": "$14",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_9xL8wi",
-        "item_tBjMJx"
-      ],
-      "name": "Desert",
-      "settings": {
-        "category": "desert"
-      }
-    },
-    "custom_resto_menu_9dw3W8": {
-      "type": "custom-resto-menu",
-      "blocks": {
-        "item_eCHPnB": {
-          "type": "item",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": ""
-          }
-        },
-        "item_NkcgxL": {
-          "type": "item",
-          "settings": {
-            "name": "Pepperoni",
-            "price": "$14",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_eCHPnB",
-        "item_NkcgxL"
-      ],
-      "name": "Menu Section",
-      "settings": {
-        "category": "Pizza"
-      }
-    },
-    "custom_split_layout_fhqCWH": {
-      "type": "custom-split-layout",
-      "name": "Split Layout",
-      "settings": {
-        "left_content": "<ul><li>Right Content </li></ul>",
-        "right_content": "<p>LEft </p>"
-      }
-    },
-    "custom_resto_menu_split_cjQ6t9": {
+    "custom_resto_menu_split_YRUNKB": {
       "type": "custom-resto-menu-split",
       "blocks": {
-        "left_item_YiznN9": {
-          "type": "left_item",
-          "name": "Margherita",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": "Classic tomato and mozzarella."
-          }
-        },
-        "left_heading_VBcnGp": {
+        "left_heading_DUPdMY": {
           "type": "left_heading",
           "settings": {
-            "title": "Salade"
+            "title": "pizza"
           }
         },
-        "left_item_YdnjGd": {
-          "type": "left_item",
-          "name": "MEAT BALL Pizza",
-          "settings": {
-            "name": "Meatball pizza",
-            "price": "20$",
-            "description": "classic pizza"
-          }
-        },
-        "right_item_hQA8DY": {
-          "type": "right_item",
-          "name": "Vino",
-          "settings": {
-            "name": "Vino",
-            "price": "10$",
-            "description": "sdfsdfsdf"
-          }
-        },
-        "right_item_trk7Nc": {
-          "type": "right_item",
-          "settings": {
-            "name": "sdlfsdljfs",
-            "price": "20$",
-            "description": "sdfsdfsdf"
-          }
-        },
-        "right_item_Ya8NVd": {
-          "type": "right_item",
-          "settings": {
-            "name": "chianti",
-            "price": "30$",
-            "description": "sdfsdfsdf"
-          }
-        }
-      },
-      "block_order": [
-        "left_item_YiznN9",
-        "left_heading_VBcnGp",
-        "left_item_YdnjGd",
-        "right_item_hQA8DY",
-        "right_item_trk7Nc",
-        "right_item_Ya8NVd"
-      ],
-      "name": "Split Menu Example",
-      "settings": {
-        "category": "MENU",
-        "left_title": "Entrees",
-        "right_title": "Wines"
-      }
-    },
-    "custom_resto_menu_split_6PTcnN": {
-      "type": "custom-resto-menu-split",
-      "blocks": {
-        "left_item_qqgPR3": {
+        "left_item_xqXNDt": {
           "type": "left_item",
           "settings": {
             "name": "Margherita",
             "price": "$12",
             "description": "Classic tomato and mozzarella."
           }
+        },
+        "left_item_Pd7bTR": {
+          "type": "left_item",
+          "name": "MeatBall ",
+          "settings": {
+            "name": "MeatBall",
+            "price": "13$",
+            "description": "Classic Meatball, cheese mozz,"
+          }
+        },
+        "left_item_LHhjEe": {
+          "type": "left_item",
+          "name": "Vegie ",
+          "settings": {
+            "name": "veggie",
+            "price": "15$",
+            "description": "Fresh tomatp sdfsldflsdflk"
+          }
+        },
+        "left_heading_CWcAVm": {
+          "type": "left_heading",
+          "settings": {
+            "title": "Entree"
+          }
+        },
+        "right_item_6zTEjB": {
+          "type": "right_item",
+          "settings": {
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Dry red wine from Tuscany."
+          }
+        },
+        "right_item_JjfVeH": {
+          "type": "right_item",
+          "settings": {
+            "name": "Chianto",
+            "price": "65$",
+            "description": "sdfsdfsdfsdfs"
+          }
         }
       },
       "block_order": [
-        "left_item_qqgPR3"
+        "left_heading_DUPdMY",
+        "left_item_xqXNDt",
+        "left_item_Pd7bTR",
+        "left_item_LHhjEe",
+        "left_heading_CWcAVm",
+        "right_item_6zTEjB",
+        "right_item_JjfVeH"
       ],
-      "name": "Split Menu Example",
+      "name": "Main Menu",
       "settings": {
-        "category": "",
-        "left_title": "PIZZA",
-        "right_title": ""
+        "category": "Menu",
+        "left_title": "Food",
+        "right_title": "Drinks"
       }
     }
   },
   "order": [
     "image_banner",
     "custom_resto_menu_3yQV3T",
-    "custom_resto_menu_77pTEa",
-    "custom_resto_menu_9dw3W8",
-    "custom_split_layout_fhqCWH",
-    "custom_resto_menu_split_cjQ6t9",
-    "custom_resto_menu_split_6PTcnN"
+    "custom_resto_menu_split_YRUNKB"
   ]
 }
