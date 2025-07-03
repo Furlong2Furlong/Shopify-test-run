@@ -1,5 +1,21 @@
 <h2>Contact</h2>
+{%  form 'contact' %}
+    {{ form.errors | default_errors }}
+    <div>
+        <label for="first_name">First Name</label>
+    <input type="text" name="fist_name" id="first_name" required placeholder="Enter your name">
+    </div>
+      <div>
+        <label for="email">email</label>
+    <input type="text" name="contact [email]" id="email" required placeholder="Email@email.com">
+    </div>
+    <div>
+        <button type="submit">contact us</button>
+    </div>
 
+    
+  
+{% endform %} 
 {% schema %}
 {
     "name": "Custom Contact Form",
