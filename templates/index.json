@@ -131,6 +131,7 @@
       "blocks": {
         "left_heading_DUPdMY": {
           "type": "left_heading",
+          "name": "Pizza",
           "settings": {
             "title": "pizza"
           }
@@ -178,6 +179,7 @@
         },
         "right_item_6zTEjB": {
           "type": "right_item",
+          "name": "Chianti",
           "settings": {
             "name": "Chianti",
             "price": "$9",
