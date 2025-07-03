@@ -29,6 +29,16 @@
             "type": "date"
           }
         },
+        "input_UyKKey": {
+          "type": "input",
+          "settings": {
+            "label": "Email:",
+            "placeholder": "message",
+            "name": "email",
+            "id": "email",
+            "type": "email"
+          }
+        },
         "input_RdHrT9": {
           "type": "input",
           "settings": {
@@ -39,21 +49,22 @@
             "type": "textarea"
           }
         },
-        "input_UyKKey": {
+        "input_RFb4GN": {
           "type": "input",
           "settings": {
-            "label": "Email:",
-            "placeholder": "message",
-            "name": "email",
-            "id": "email",
-            "type": "email"
+            "label": "Pizza",
+            "placeholder": "",
+            "name": "",
+            "id": "",
+            "type": "checkbox"
           }
         }
       },
       "block_order": [
         "input_iDnX9e",
+        "input_UyKKey",
         "input_RdHrT9",
-        "input_UyKKey"
+        "input_RFb4GN"
       ],
       "name": "Custom Contact Form",
       "settings": {
