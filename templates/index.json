@@ -191,6 +191,22 @@
         "left_content": "<ul><li>Right Content </li></ul>",
         "right_content": "<p>LEft </p>"
       }
+    },
+    "custom_split_layout_blocks_Dd6z4g": {
+      "type": "custom-split-layout-blocks",
+      "blocks": {
+        "left_xYfhq8": {
+          "type": "left",
+          "settings": {
+            "content": "<p>sdfsdfsdfsdfsdfsdf</p>"
+          }
+        }
+      },
+      "block_order": [
+        "left_xYfhq8"
+      ],
+      "name": "Split Layout",
+      "settings": {}
     }
   },
   "order": [
@@ -198,6 +214,7 @@
     "custom_resto_menu_3yQV3T",
     "custom_resto_menu_77pTEa",
     "custom_resto_menu_9dw3W8",
-    "custom_split_layout_fhqCWH"
+    "custom_split_layout_fhqCWH",
+    "custom_split_layout_blocks_Dd6z4g"
   ]
 }
