@@ -161,18 +161,19 @@
             "description": "Fresh tomatp sdfsldflsdflk"
           }
         },
+        "left_heading_CWcAVm": {
+          "type": "left_heading",
+          "name": "Entree",
+          "settings": {
+            "title": "Entree"
+          }
+        },
         "left_item_NJfbiL": {
           "type": "left_item",
           "settings": {
             "name": "Ceasar Salade",
             "price": "10$",
             "description": "sd salade green anchovies sjdksldkfj"
-          }
-        },
-        "left_heading_CWcAVm": {
-          "type": "left_heading",
-          "settings": {
-            "title": "Entree"
           }
         },
         "right_item_6zTEjB": {
@@ -197,8 +198,8 @@
         "left_item_xqXNDt",
         "left_item_Pd7bTR",
         "left_item_LHhjEe",
-        "left_item_NJfbiL",
         "left_heading_CWcAVm",
+        "left_item_NJfbiL",
         "right_item_6zTEjB",
         "right_item_JjfVeH"
       ],
