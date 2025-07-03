@@ -220,28 +220,10 @@
         "right_title": ""
       }
     },
-    "custom_resto_menu_tags_pH87xk": {
+    "custom_resto_menu_tags_4tYQqL": {
       "type": "custom-resto-menu-tags",
       "blocks": {
-        "menu_item_63qGfG": {
-          "type": "menu_item",
-          "settings": {
-            "name": "MArg",
-            "price": "13",
-            "description": "sdfsdfsdfsdf",
-            "category": "Pizza"
-          }
-        },
-        "menu_item_NwCq9x": {
-          "type": "menu_item",
-          "settings": {
-            "name": "sdfsdf",
-            "price": "sdfsdf",
-            "description": "sdfsdf",
-            "category": "wine"
-          }
-        },
-        "menu_item_AUFEVi": {
+        "menu_item_7VXQpN": {
           "type": "menu_item",
           "settings": {
             "name": "Margherita",
@@ -250,31 +232,39 @@
             "category": "Pizza"
           }
         },
-        "menu_item_CER7xP": {
+        "menu_item_XfUktm": {
           "type": "menu_item",
           "settings": {
-            "name": "sdfsdf",
-            "price": "33$",
-            "description": "sdfsdf",
-            "category": "wine"
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Red wine from Tuscany.",
+            "category": "Wine"
           }
         },
-        "menu_item_yxDaGB": {
+        "menu_item_T83DHy": {
           "type": "menu_item",
           "settings": {
-            "name": "sdfsdf",
-            "price": "sdfsdf",
-            "description": "sdfsdf",
+            "name": "Hello",
+            "price": "sdf",
+            "description": "sdf",
             "category": "Pizza"
+          }
+        },
+        "menu_item_iTxnpE": {
+          "type": "menu_item",
+          "settings": {
+            "name": "sd",
+            "price": "sfd",
+            "description": "sdfsf",
+            "category": "Wine"
           }
         }
       },
       "block_order": [
-        "menu_item_63qGfG",
-        "menu_item_NwCq9x",
-        "menu_item_AUFEVi",
-        "menu_item_CER7xP",
-        "menu_item_yxDaGB"
+        "menu_item_7VXQpN",
+        "menu_item_XfUktm",
+        "menu_item_T83DHy",
+        "menu_item_iTxnpE"
       ],
       "name": "Filterable Menu",
       "settings": {}
@@ -284,6 +274,6 @@
     "image_banner",
     "custom_resto_menu_3yQV3T",
     "custom_resto_menu_split_YRUNKB",
-    "custom_resto_menu_tags_pH87xk"
+    "custom_resto_menu_tags_4tYQqL"
   ]
 }
