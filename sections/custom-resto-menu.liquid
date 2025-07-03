@@ -1,7 +1,7 @@
 {% if section.settings.category %}
   <h2>{{ section.settings.category }}</h2>
 {% endif %}
-
+<div class="menu-wrapper">
 <div class="menu-category">
 
   {% for block in section.blocks %}
@@ -16,6 +16,7 @@
     {% endif %}
     </div>
   {% endfor %}
+</div>
 </div>
 
 {% schema %}
@@ -92,5 +93,9 @@
   margin-bottom: 0;
   font-size: 0.95rem;
   color: #555;
+}
+.menu-wrapper {
+  width: 50%;
+  margin: 0 auto;
 }
 </style>
