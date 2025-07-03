@@ -1,0 +1,145 @@
+<div class="menu-wrapper">
+  {% if section.settings.category %}
+    <h2 class="menu-category-title">{{ section.settings.category }}</h2>
+  {% endif %}
+
+  <div class="menu-split">
+    <div class="menu-left">
+      {% for block in section.blocks %}
+        {% if block.type == 'left_item' %}
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">{{ block.settings.name }}</h3>
+              <span class="menu-item-price">{{ block.settings.price }}</span>
+            </div>
+            {% if block.settings.description != blank %}
+              <p class="menu-item-description">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="menu-right">
+      {% for block in section.blocks %}
+        {% if block.type == 'right_item' %}
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">{{ block.settings.name }}</h3>
+              <span class="menu-item-price">{{ block.settings.price }}</span>
+            </div>
+            {% if block.settings.description != blank %}
+              <p class="menu-item-description">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Split Menu Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "category",
+      "label": "Section Title",
+      "default": "Menu",
+      "info": "💡 Appears above both columns."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_item",
+      "name": "Left Menu Item",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Item Name" },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "text", "id": "description", "label": "Description" }
+      ]
+    },
+    {
+      "type": "right_item",
+      "name": "Right Menu Item",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Item Name" },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "text", "id": "description", "label": "Description" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split Menu Example",
+      "category": "Restaurant",
+      "settings": {
+        "category": "Wines & Pizzas"
+      },
+      "blocks": [
+        {
+          "type": "left_item",
+          "settings": { "name": "Margherita", "price": "$12", "description": "Classic tomato and mozzarella." }
+        },
+        {
+          "type": "right_item",
+          "settings": { "name": "Chianti", "price": "$9", "description": "Dry red wine from Tuscany." }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+.menu-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-category-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-split {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-left,
+.menu-right {
+  width: 50%;
+}
+
+.menu-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.menu-item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.menu-item-price {
+  font-weight: bold;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.menu-item-description {
+  font-size: 0.95rem;
+  margin-top: 0.3em;
+  color: #555;
+}
+{% endstyle %}
