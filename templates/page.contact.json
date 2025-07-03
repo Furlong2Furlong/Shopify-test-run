@@ -25,7 +25,7 @@
             "name": "order",
             "placeholder": "choose",
             "label": "Pizza",
-            "id": "pizza",
+            "id": "text",
             "type": "order"
           }
         }
