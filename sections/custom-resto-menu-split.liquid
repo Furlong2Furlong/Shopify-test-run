@@ -1,7 +1,21 @@
+<script src="{{ 'menu-filter.js' | asset_url }}" defer></script>
+
 <div class="menu-wrapper">
   {% if section.settings.category %}
     <h2 class="menu-category-title">{{ section.settings.category }}</h2>
   {% endif %}
+  <div class="menu-filters">
+  <button data-filter="all" class="active">All</button>
+  {% capture seen_categories %}|all|{% endcapture %}
+  {% for block in section.blocks %}
+    {% assign cat_handle = block.settings.category | handle %}
+    {% unless seen_categories contains cat_handle %}
+      <button data-filter="{{ cat_handle }}">{{ block.settings.category }}</button>
+      {% capture seen_categories %}{{ seen_categories }}{{ cat_handle }}|{% endcapture %}
+    {% endunless %}
+  {% endfor %}
+</div>
+
 
   <div class="menu-split">
     <div class="menu-left">
@@ -12,7 +26,7 @@
         {% if block.type == 'left_heading' %}
           <h3 class="menu-subheading">{{ block.settings.title }}</h3>
         {% elsif block.type == 'left_item' %}
-          <div class="menu-item">
+          <div class="menu-item" data-category="{{ block.settings.category | handle }}">
             <div class="menu-item-header">
               <h3 class="menu-item-name">{{ block.settings.name }}</h3>
               <span class="menu-item-price">{{ block.settings.price }}</span>
@@ -33,7 +47,7 @@
         {% if block.type == 'right_heading' %}
           <h3 class="menu-subheading">{{ block.settings.title }}</h3>
         {% elsif block.type == 'right_item' %}
-          <div class="menu-item">
+          <div class="menu-item" data-category="{{ block.settings.category | handle }}">
             <div class="menu-item-header">
               <h3 class="menu-item-name">{{ block.settings.name }}</h3>
               <span class="menu-item-price">{{ block.settings.price }}</span>
