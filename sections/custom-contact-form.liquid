@@ -10,15 +10,42 @@
       {%- elsif form.errors -%}
     {{ form.errors | default_errors }}
       {%- endif -%}
+{% for block in section.blocks %}
+    {% if block.type == "input" %}
+      {% assign input_type = block.settings.type %}
+      {% assign input_name = block.settings.name | default: block.settings.id %}
+      <div class="form-field form-{{ input_type }}">
+        {% if input_type == "textarea" %}
+          <label for="{{ block.settings.id }}">{{ block.settings.label }}</label>
+          <textarea
+            name="contact[{{ input_name }}]"
+            id="{{ block.settings.id }}"
+            placeholder="{{ block.settings.placeholder }}"
+            {% if block.settings.required %}required{% endif %}>{{ form[input_name] | escape }}</textarea>
 
-      {% for block in section.blocks %}
-        {% if block.type == "input" %}
-                <div>
-        <label for="{{ block.settings.id }}">{{ block.settings.label }}</label>
-    <input type="{{  block.settings.type }}" name="contact[{{ block.settings.name }}]" id="{{ block.settings.id }}" placeholder="{{  block.settings.placeholder }}" value="{% if form[block.settings.name] %}{{form[ block.settings.name]}}{% endif %}">
-    </div>
-            {% endif %}
-        {% endfor %}
+        {% elsif input_type == "checkbox" %}
+          <input
+            type="checkbox"
+            name="contact[{{ input_name }}]"
+            id="{{ block.settings.id }}"
+            value="yes"
+            {% if form[input_name] %}checked{% endif %}
+            {% if block.settings.required %}required{% endif %}>
+          <label for="{{ block.settings.id }}">{{ block.settings.label }}</label>
+
+        {% else %}
+          <label for="{{ block.settings.id }}">{{ block.settings.label }}</label>
+          <input
+            type="{{ input_type }}"
+            name="contact[{{ input_name }}]"
+            id="{{ block.settings.id }}"
+            placeholder="{{ block.settings.placeholder }}"
+            value="{{ form[input_name] | escape }}"
+            {% if block.settings.required %}required{% endif %}>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
     
 
       
