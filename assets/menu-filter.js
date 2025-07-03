@@ -5,36 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('.menu-item');
   const headings = document.querySelectorAll('.menu-subheading');
 
+  const leftCol = document.querySelector('.menu-left');
+  const rightCol = document.querySelector('.menu-right');
+
   function updateLayout() {
-    const leftCol = document.querySelector('.menu-left');
-    const rightCol = document.querySelector('.menu-right');
+    // ✅ Always reset visibility before checking contents
+    leftCol.style.display = '';
+    rightCol.style.display = '';
+    leftCol.style.width = '50%';
+    rightCol.style.width = '50%';
+    leftCol.style.margin = '';
+    rightCol.style.margin = '';
 
     const leftVisible = Array.from(leftCol.querySelectorAll('.menu-item, .menu-subheading')).some(
-      (el) => window.getComputedStyle(el).display !== 'none'
+      (el) => el.offsetParent !== null
     );
 
     const rightVisible = Array.from(rightCol.querySelectorAll('.menu-item, .menu-subheading')).some(
-      (el) => window.getComputedStyle(el).display !== 'none'
+      (el) => el.offsetParent !== null
     );
 
     if (leftVisible && !rightVisible) {
-      // Only left visible — center it, hide right
       leftCol.style.width = '100%';
       leftCol.style.margin = '0 auto';
       rightCol.style.display = 'none';
     } else if (!leftVisible && rightVisible) {
-      // Only right visible — center it, hide left
       rightCol.style.width = '100%';
       rightCol.style.margin = '0 auto';
       leftCol.style.display = 'none';
-    } else {
-      // Both or none visible — reset styles
-      leftCol.style.width = '50%';
-      leftCol.style.margin = '';
-      leftCol.style.display = '';
-      rightCol.style.width = '50%';
-      rightCol.style.margin = '';
-      rightCol.style.display = '';
     }
   }
 
@@ -50,28 +48,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const catAttr = item.getAttribute('data-category');
         const cat = catAttr ? catAttr.trim().toLowerCase() : '';
 
-        if (filter === 'all' || cat === filter) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
+        item.style.display = filter === 'all' || cat === filter ? '' : 'none';
       });
 
       headings.forEach((heading) => {
         const catAttr = heading.getAttribute('data-category');
         const cat = catAttr ? catAttr.trim().toLowerCase() : '';
 
-        if (filter === 'all' || cat === filter) {
-          heading.style.display = '';
-        } else {
-          heading.style.display = 'none';
-        }
+        heading.style.display = filter === 'all' || cat === filter ? '' : 'none';
       });
 
       updateLayout();
     });
   });
 
-  // Initial layout check
-  updateLayout();
+  updateLayout(); // Initial layout
 });
