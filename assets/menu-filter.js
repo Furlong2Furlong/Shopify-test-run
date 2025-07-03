@@ -23,6 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
           item.style.display = 'none';
         }
       });
+
+      // Also filter headings!
+      headings.forEach((heading) => {
+        const catAttr = heading.getAttribute('data-category');
+        const cat = catAttr ? catAttr.trim().toLowerCase() : '';
+
+        if (filter === 'all' || cat === filter) {
+          heading.style.display = '';
+        } else {
+          heading.style.display = 'none';
+        }
+      });
     });
   });
 });
