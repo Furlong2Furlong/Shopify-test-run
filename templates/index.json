@@ -207,6 +207,27 @@
       ],
       "name": "Split Layout",
       "settings": {}
+    },
+    "custom_split_layout_blocks_nyPC97": {
+      "type": "custom-split-layout-blocks",
+      "name": "Split Layout",
+      "settings": {}
+    },
+    "custom_split_layout_blocks_8NznQ7": {
+      "type": "custom-split-layout-blocks",
+      "blocks": {
+        "right_MFdEDa": {
+          "type": "right",
+          "settings": {
+            "content": "<p>sdfsdfsdfsdfsdfsdfs</p>"
+          }
+        }
+      },
+      "block_order": [
+        "right_MFdEDa"
+      ],
+      "name": "Split Layout",
+      "settings": {}
     }
   },
   "order": [
@@ -215,6 +236,8 @@
     "custom_resto_menu_77pTEa",
     "custom_resto_menu_9dw3W8",
     "custom_split_layout_fhqCWH",
-    "custom_split_layout_blocks_Dd6z4g"
+    "custom_split_layout_blocks_Dd6z4g",
+    "custom_split_layout_blocks_nyPC97",
+    "custom_split_layout_blocks_8NznQ7"
   ]
 }
