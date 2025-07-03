@@ -273,9 +273,9 @@
         "menu_item_yxDaGB": {
           "type": "menu_item",
           "settings": {
-            "name": "",
-            "price": "",
-            "description": "",
+            "name": "sdfsdf",
+            "price": "sdfsdf",
+            "description": "sdfsdf",
             "category": "Pizza"
           }
         }
