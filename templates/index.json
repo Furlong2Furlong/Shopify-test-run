@@ -204,6 +204,15 @@
             "description": "Classic tomato and mozzarella."
           }
         },
+        "left_item_YdnjGd": {
+          "type": "left_item",
+          "name": "MEAT BALL Pizza",
+          "settings": {
+            "name": "Meatball pizza",
+            "price": "20$",
+            "description": "classic pizza"
+          }
+        },
         "right_item_aP3cnH": {
           "type": "right_item",
           "settings": {
@@ -215,6 +224,7 @@
       },
       "block_order": [
         "left_item_YiznN9",
+        "left_item_YdnjGd",
         "right_item_aP3cnH"
       ],
       "name": "Split Menu Example",
