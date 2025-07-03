@@ -22,29 +22,19 @@
         "input_VjnAN6": {
           "type": "input",
           "settings": {
-            "name": "email",
-            "placeholder": "johndoe@john.com",
             "label": "email:",
+            "placeholder": "johndoe@john.com",
+            "name": "",
             "id": "email",
-            "type": "email"
-          }
-        },
-        "input_EYrrPE": {
-          "type": "input",
-          "settings": {
-            "name": "tel",
-            "placeholder": "phone number",
-            "label": "Phone:",
-            "id": "tel",
             "type": "tel"
           }
         },
         "input_iDnX9e": {
           "type": "input",
           "settings": {
-            "name": "date",
-            "placeholder": "Date:",
             "label": "Date:",
+            "placeholder": "Date:",
+            "name": "date",
             "id": "date",
             "type": "date"
           }
@@ -52,19 +42,29 @@
         "input_RdHrT9": {
           "type": "input",
           "settings": {
-            "name": "message",
-            "placeholder": "Write your message",
             "label": "Write you message here:",
+            "placeholder": "Write your message",
+            "name": "message",
             "id": "text",
             "type": "textarea"
+          }
+        },
+        "input_UyKKey": {
+          "type": "input",
+          "settings": {
+            "label": "Email:",
+            "placeholder": "message",
+            "name": "Message",
+            "id": "email",
+            "type": "email"
           }
         }
       },
       "block_order": [
         "input_VjnAN6",
-        "input_EYrrPE",
         "input_iDnX9e",
-        "input_RdHrT9"
+        "input_RdHrT9",
+        "input_UyKKey"
       ],
       "name": "Custom Contact Form",
       "settings": {
