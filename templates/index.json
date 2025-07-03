@@ -192,42 +192,35 @@
         "right_content": "<p>LEft </p>"
       }
     },
-    "custom_split_layout_blocks_Dd6z4g": {
-      "type": "custom-split-layout-blocks",
+    "custom_resto_menu_split_cjQ6t9": {
+      "type": "custom-resto-menu-split",
       "blocks": {
-        "left_xYfhq8": {
-          "type": "left",
+        "left_item_YiznN9": {
+          "type": "left_item",
+          "name": "Margherita",
           "settings": {
-            "content": "<p>sdfsdfsdfsdfsdfsdf</p>"
+            "name": "Margherita",
+            "price": "$12",
+            "description": "Classic tomato and mozzarella."
+          }
+        },
+        "right_item_aP3cnH": {
+          "type": "right_item",
+          "settings": {
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Dry red wine from Tuscany."
           }
         }
       },
       "block_order": [
-        "left_xYfhq8"
+        "left_item_YiznN9",
+        "right_item_aP3cnH"
       ],
-      "name": "Split Layout",
-      "settings": {}
-    },
-    "custom_split_layout_blocks_nyPC97": {
-      "type": "custom-split-layout-blocks",
-      "name": "Split Layout",
-      "settings": {}
-    },
-    "custom_split_layout_blocks_8NznQ7": {
-      "type": "custom-split-layout-blocks",
-      "blocks": {
-        "right_MFdEDa": {
-          "type": "right",
-          "settings": {
-            "content": "<p>sdfsdfsdfsdfsdfsdfs</p>"
-          }
-        }
-      },
-      "block_order": [
-        "right_MFdEDa"
-      ],
-      "name": "Split Layout",
-      "settings": {}
+      "name": "Split Menu Example",
+      "settings": {
+        "category": "Pizza & Wines"
+      }
     }
   },
   "order": [
@@ -236,8 +229,6 @@
     "custom_resto_menu_77pTEa",
     "custom_resto_menu_9dw3W8",
     "custom_split_layout_fhqCWH",
-    "custom_split_layout_blocks_Dd6z4g",
-    "custom_split_layout_blocks_nyPC97",
-    "custom_split_layout_blocks_8NznQ7"
+    "custom_resto_menu_split_cjQ6t9"
   ]
 }
