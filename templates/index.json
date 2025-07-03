@@ -126,100 +126,6 @@
         "category": "Pizza"
       }
     },
-    "custom_resto_menu_split_YRUNKB": {
-      "type": "custom-resto-menu-split",
-      "blocks": {
-        "left_heading_DUPdMY": {
-          "type": "left_heading",
-          "name": "Pizza",
-          "settings": {
-            "title": "pizza"
-          }
-        },
-        "left_item_xqXNDt": {
-          "type": "left_item",
-          "settings": {
-            "name": "Margherita",
-            "price": "$12",
-            "description": "Classic tomato and mozzarella."
-          }
-        },
-        "left_item_Pd7bTR": {
-          "type": "left_item",
-          "name": "MeatBall ",
-          "settings": {
-            "name": "MeatBall",
-            "price": "13$",
-            "description": "Classic Meatball, cheese mozz,"
-          }
-        },
-        "left_item_LHhjEe": {
-          "type": "left_item",
-          "name": "Vegie ",
-          "settings": {
-            "name": "veggie",
-            "price": "15$",
-            "description": "Fresh tomatp sdfsldflsdflk"
-          }
-        },
-        "left_heading_CWcAVm": {
-          "type": "left_heading",
-          "name": "Entree",
-          "settings": {
-            "title": "Entree"
-          }
-        },
-        "left_item_NJfbiL": {
-          "type": "left_item",
-          "settings": {
-            "name": "Ceasar Salade",
-            "price": "10$",
-            "description": "sd salade green anchovies sjdksldkfj"
-          }
-        },
-        "right_heading_7KQcfU": {
-          "type": "right_heading",
-          "name": "Wine",
-          "settings": {
-            "title": "Wines"
-          }
-        },
-        "right_item_6zTEjB": {
-          "type": "right_item",
-          "name": "Chianti",
-          "settings": {
-            "name": "Chianti",
-            "price": "$9",
-            "description": "Dry red wine from Tuscany."
-          }
-        },
-        "right_item_JjfVeH": {
-          "type": "right_item",
-          "settings": {
-            "name": "Chianto",
-            "price": "65$",
-            "description": "sdfsdfsdfsdfs"
-          }
-        }
-      },
-      "block_order": [
-        "left_heading_DUPdMY",
-        "left_item_xqXNDt",
-        "left_item_Pd7bTR",
-        "left_item_LHhjEe",
-        "left_heading_CWcAVm",
-        "left_item_NJfbiL",
-        "right_heading_7KQcfU",
-        "right_item_6zTEjB",
-        "right_item_JjfVeH"
-      ],
-      "name": "Main Menu",
-      "settings": {
-        "category": "Menu",
-        "left_title": "",
-        "right_title": ""
-      }
-    },
     "custom_resto_menu_tags_4tYQqL": {
       "type": "custom-resto-menu-tags",
       "blocks": {
@@ -268,6 +174,109 @@
       ],
       "name": "Filterable Menu",
       "settings": {}
+    },
+    "custom_resto_menu_split_YRUNKB": {
+      "type": "custom-resto-menu-split",
+      "blocks": {
+        "left_heading_DUPdMY": {
+          "type": "left_heading",
+          "name": "Pizza",
+          "settings": {
+            "title": "pizza",
+            "category": "Pizza"
+          }
+        },
+        "left_item_xqXNDt": {
+          "type": "left_item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": "Classic tomato and mozzarella.",
+            "category": "Pizza"
+          }
+        },
+        "left_item_Pd7bTR": {
+          "type": "left_item",
+          "name": "MeatBall ",
+          "settings": {
+            "name": "MeatBall",
+            "price": "13$",
+            "description": "Classic Meatball, cheese mozz,",
+            "category": "Pizza"
+          }
+        },
+        "left_item_LHhjEe": {
+          "type": "left_item",
+          "name": "Vegie ",
+          "settings": {
+            "name": "veggie",
+            "price": "15$",
+            "description": "Fresh tomatp sdfsldflsdflk",
+            "category": "Pizza"
+          }
+        },
+        "left_heading_CWcAVm": {
+          "type": "left_heading",
+          "name": "Entree",
+          "settings": {
+            "title": "Entree",
+            "category": "Pizza"
+          }
+        },
+        "left_item_NJfbiL": {
+          "type": "left_item",
+          "settings": {
+            "name": "Ceasar Salade",
+            "price": "10$",
+            "description": "sd salade green anchovies sjdksldkfj",
+            "category": "Pizza"
+          }
+        },
+        "right_heading_7KQcfU": {
+          "type": "right_heading",
+          "name": "Wine",
+          "settings": {
+            "title": "Wines",
+            "category": "Wine"
+          }
+        },
+        "right_item_6zTEjB": {
+          "type": "right_item",
+          "name": "Chianti",
+          "settings": {
+            "name": "Chianti",
+            "price": "$9",
+            "description": "Dry red wine from Tuscany.",
+            "category": "Wine"
+          }
+        },
+        "right_item_JjfVeH": {
+          "type": "right_item",
+          "settings": {
+            "name": "Chianto",
+            "price": "65$",
+            "description": "sdfsdfsdfsdfs",
+            "category": "Wine"
+          }
+        }
+      },
+      "block_order": [
+        "left_heading_DUPdMY",
+        "left_item_xqXNDt",
+        "left_item_Pd7bTR",
+        "left_item_LHhjEe",
+        "left_heading_CWcAVm",
+        "left_item_NJfbiL",
+        "right_heading_7KQcfU",
+        "right_item_6zTEjB",
+        "right_item_JjfVeH"
+      ],
+      "name": "Main Menu",
+      "settings": {
+        "category": "Menu",
+        "left_title": "",
+        "right_title": ""
+      }
     }
   },
   "order": [
