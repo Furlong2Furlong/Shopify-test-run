@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     if (leftVisible && !rightVisible) {
-      leftCol.style.width = '100%';
+      leftCol.style.width = '50%';
       leftCol.style.margin = '0 auto';
       rightCol.style.display = 'none';
     } else if (!leftVisible && rightVisible) {
-      rightCol.style.width = '100%';
+      rightCol.style.width = '50%';
       rightCol.style.margin = '0 auto';
       leftCol.style.display = 'none';
     }
