@@ -112,10 +112,11 @@
       "blocks": {
         "item_9xL8wi": {
           "type": "item",
+          "name": "chocolate cake",
           "settings": {
             "name": "Margherita",
             "price": "$12",
-            "description": ""
+            "description": "sdfsdfsdfsdfsf"
           }
         },
         "item_tBjMJx": {
@@ -135,11 +136,41 @@
       "settings": {
         "category": "desert"
       }
+    },
+    "custom_resto_menu_9dw3W8": {
+      "type": "custom-resto-menu",
+      "blocks": {
+        "item_eCHPnB": {
+          "type": "item",
+          "settings": {
+            "name": "Margherita",
+            "price": "$12",
+            "description": ""
+          }
+        },
+        "item_NkcgxL": {
+          "type": "item",
+          "settings": {
+            "name": "Pepperoni",
+            "price": "$14",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_eCHPnB",
+        "item_NkcgxL"
+      ],
+      "name": "Menu Section",
+      "settings": {
+        "category": "Pizza"
+      }
     }
   },
   "order": [
     "image_banner",
     "custom_resto_menu_3yQV3T",
-    "custom_resto_menu_77pTEa"
+    "custom_resto_menu_77pTEa",
+    "custom_resto_menu_9dw3W8"
   ]
 }
