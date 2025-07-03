@@ -122,32 +122,17 @@
     "specs_k3Yyk6": {
       "type": "specs",
       "blocks": {
-        "specs_row_dTeLjp": {
+        "specs_row_whXdg9": {
           "type": "specs_row",
+          "repeater": "{{ product.metafields.custom.spec_rows.value }}",
           "settings": {
-            "label": "Hieght:",
-            "value": "80$"
-          }
-        },
-        "specs_row_yyUyAH": {
-          "type": "specs_row",
-          "settings": {
-            "label": "Dimention:",
-            "value": "# Dementional"
-          }
-        },
-        "specs_row_pP3CQQ": {
-          "type": "specs_row",
-          "settings": {
-            "label": "Distance:",
-            "value": "15 KM"
+            "label": "{{ block.repeater.label.value }}",
+            "value": "{{ block.repeater.value.value }}"
           }
         }
       },
       "block_order": [
-        "specs_row_dTeLjp",
-        "specs_row_yyUyAH",
-        "specs_row_pP3CQQ"
+        "specs_row_whXdg9"
       ],
       "name": "Specs Blocks",
       "settings": {}
