@@ -102,6 +102,14 @@
             "price": "12$",
             "description": "sdfsdfsdfsdf"
           }
+        },
+        "item_nmFr36": {
+          "type": "item",
+          "settings": {
+            "name": "sdfsdfs",
+            "price": "sdfsdf",
+            "description": "sdfsdf"
+          }
         }
       },
       "block_order": [
@@ -109,7 +117,8 @@
         "item_LfHjaD",
         "item_rP3Fq9",
         "item_f6qjwG",
-        "item_gmpw6e"
+        "item_gmpw6e",
+        "item_nmFr36"
       ],
       "name": "Pizza Menu",
       "settings": {
