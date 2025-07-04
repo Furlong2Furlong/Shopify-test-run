@@ -161,13 +161,8 @@
       "id": "allow_saturday",
       "label": "Allow Saturday",
       "default": false
-    },
-    {
-      "type": "textarea",
-      "id": "blackout_dates",
-      "label": "Blackout dates (YYYY-MM-DD, one per line)",
-      "default": ""
     }
+
   ],
   "presets": [
     {
@@ -177,7 +172,6 @@
 }
 {% endschema %}
 
-{% endschema %}
 
 <!-- Flatpickr JS -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer ></script>
@@ -185,7 +179,15 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const minDays = {{ section.settings.minimum_days_notice | default: 2 }};
-    const allowedDays = {{ section.settings.available_days | json }};
+const allowedDays = [];
+{% if section.settings.allow_sunday %}allowedDays.push("0");{% endif %}
+{% if section.settings.allow_monday %}allowedDays.push("1");{% endif %}
+{% if section.settings.allow_tuesday %}allowedDays.push("2");{% endif %}
+{% if section.settings.allow_wednesday %}allowedDays.push("3");{% endif %}
+{% if section.settings.allow_thursday %}allowedDays.push("4");{% endif %}
+{% if section.settings.allow_friday %}allowedDays.push("5");{% endif %}
+{% if section.settings.allow_saturday %}allowedDays.push("6");{% endif %}
+
     const blackoutDates = {{ section.settings.blackout_dates | newline_to_br | split: '<br />' | json }};
 
     flatpickr('#pickup-date', {
