@@ -119,11 +119,17 @@
       ],
       "name": "Specs Blocks",
       "settings": {}
+    },
+    "custom_featured_artist_MQEFUt": {
+      "type": "custom-featured-artist",
+      "name": "Featured Artist",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "related-products",
-    "specs_k3Yyk6"
+    "specs_k3Yyk6",
+    "custom_featured_artist_MQEFUt"
   ]
 }
