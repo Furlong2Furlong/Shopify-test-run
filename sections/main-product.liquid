@@ -476,6 +476,28 @@
      <p>{{ product.metafields.custom.estimated_shipping_date }}</p>
     </div>
   {%- endif -%}
+  {% assign artist = shop.metafields.custom.featured_artist.value %}
+
+{% if artist %}
+  <div class="featured-artist">
+    <h2>Featured Artist: {{ artist.name }}</h2>
+    {% if artist.photo %}
+      <img 
+      src="{{ artist.photo | image_url: width: 300 }}" 
+      alt="{{ artist.name }}" 
+      style="border-radius: 12px; max-width: 200px; height: auto; width: 100%;" 
+      width="200" 
+      height="{{ artist.photo.height | default: 200 }}"
+      >
+    {% endif %}
+    {% if artist.bio %}
+      <p>{{ artist.bio }}</p>
+    {% endif %}
+    {% if artist.website %}
+      <a href="{{ artist.website }}" target="_blank">Visit Website</a>
+    {% endif %}
+  </div>
+{% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
