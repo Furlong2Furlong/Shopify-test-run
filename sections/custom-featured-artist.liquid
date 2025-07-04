@@ -13,9 +13,10 @@
     }
 
     .artist-photo img {
-      width: 100%;
-      max-width: 300px;
+      max-width: 100%;
+      height: auto;
       border-radius: 12px;
+      display: block;
     }
 
     .artist-info {
@@ -49,9 +50,11 @@
     }
 
     .artist-artwork img {
-      width: 100%;
-      max-width: 1000px;
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
+      display: block;
+      margin: 0 auto;
     }
 
     @media screen and (max-width: 768px) {
@@ -69,9 +72,28 @@
   <div class="featured-artist-section">
     <div class="artist-photo">
       {% if artist.photo %}
-        <img src="{{ artist.photo | image_url: width: 600 }}" alt="{{ artist.name }}" width="600" height="600">
+        {% if artist.photo.width and artist.photo.height %}
+          <img 
+            src="{{ artist.photo | image_url: width: 600 }}" 
+            alt="{{ artist.name }}"
+            width="{{ artist.photo.width }}"
+            height="{{ artist.photo.height }}">
+        {% else %}
+          {% assign aspect_ratio = 1.5 %}
+          {% if artist.photo.aspect_ratio %}
+            {% assign aspect_ratio = artist.photo.aspect_ratio %}
+          {% endif %}
+          {% assign display_width = 600 %}
+          {% assign display_height = display_width | divided_by: aspect_ratio | round %}
+          <img 
+            src="{{ artist.photo | image_url: width: display_width }}" 
+            alt="{{ artist.name }}"
+            width="{{ display_width }}"
+            height="{{ display_height }}">
+        {% endif %}
       {% endif %}
     </div>
+
     <div class="artist-info">
       <h2>Featured Artist: {{ artist.name }}</h2>
       <p>{{ artist.bio }}</p>
@@ -82,29 +104,28 @@
 
     {% if artist.artwork %}
       <div class="artist-artwork">
-        <img 
-          src="{{ artist.artwork | image_url: width: 1200 }}" 
-          alt="{{ artist.name }} Artwork"
-          width="1200"
-          height="800"
-        >
+        {% if artist.artwork.width and artist.artwork.height %}
+          <img 
+            src="{{ artist.artwork | image_url: width: artist.artwork.width }}" 
+            alt="{{ artist.name }} Artwork"
+            width="{{ artist.artwork.width }}"
+            height="{{ artist.artwork.height }}">
+        {% else %}
+          {% assign fallback_width = 1200 %}
+          {% assign fallback_aspect_ratio = 1.5 %}
+          {% if artist.artwork.aspect_ratio %}
+            {% assign fallback_aspect_ratio = artist.artwork.aspect_ratio %}
+          {% endif %}
+          {% assign fallback_height = fallback_width | divided_by: fallback_aspect_ratio | round %}
+          <img 
+            src="{{ artist.artwork | image_url: width: fallback_width }}" 
+            alt="{{ artist.name }} Artwork"
+            width="{{ fallback_width }}"
+            height="{{ fallback_height }}">
+        {% endif %}
       </div>
     {% endif %}
   </div>
 {% else %}
   <p>No featured artist set.</p>
 {% endif %}
-
-
-{% schema %}
-{
-  "name": "Featured Artist",
-  "tag": "section",
-  "settings": [],
-  "presets": [
-    {
-      "name": "Featured Artist"
-    }
-  ]
-}
-{% endschema %}
