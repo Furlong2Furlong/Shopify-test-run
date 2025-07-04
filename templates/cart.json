@@ -71,7 +71,14 @@
       "type": "custom-pickup-calendar-settings",
       "name": "Pickup Calendar",
       "settings": {
-        "minimum_days_notice": 8
+        "minimum_days_notice": 8,
+        "allow_sunday": true,
+        "allow_monday": false,
+        "allow_tuesday": true,
+        "allow_wednesday": false,
+        "allow_thursday": false,
+        "allow_friday": false,
+        "allow_saturday": false
       }
     }
   },
