@@ -83,10 +83,13 @@
 
     flatpickr('#pickup-date', {
       dateFormat: "Y-m-d",
-      minDate: new Date().fp_incr(minDays),
+      minDate: new Date(Date.now() + minDays * 24 * 60 * 60 * 1000), // minDays from today
       disable: [
-        function (date) {
-          return date.getDay() !== allowedDay || blackoutDates.includes(date.toISOString().split('T')[0]);
+        function(date) {
+          // Disable days not matching allowedDay or in blackoutDates
+          const day = date.getDay();
+          const formatted = date.toISOString().split('T')[0];
+          return day !== allowedDay || blackoutDates.includes(formatted);
         }
       ]
     });
