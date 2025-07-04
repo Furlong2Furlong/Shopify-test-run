@@ -2,7 +2,8 @@
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-
+{{ 'https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css' | stylesheet_tag }}
+<script src="{{ 'flatpickr.min.js' | asset_url }}" defer></script>
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -108,13 +109,15 @@
   <h3>Choose Your Pickup Date & Time</h3>
   
   <label for="pickup-date">Pickup Date:</label><br>
-  <input
-    type="date"
-    id="pickup-date"
-    name="attributes[Pickup Date]"
-    value="{{ cart.attributes['Pickup Date'] }}"
-    required
-  ><br><br>
+<input
+  type="text"
+  id="pickup-date"
+  name="attributes[Pickup Date]"
+  value="{{ cart.attributes['Pickup Date'] }}"
+  placeholder="Select pickup date"
+  required
+>
+<br><br>
 
   <label for="pickup-time">Pickup Time:</label><br>
   <input
@@ -125,6 +128,9 @@
     required
   >
 </div>
+
+
+
 
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
@@ -233,17 +239,41 @@ label {
   font-weight: bold;
   margin-bottom: 4px;
   display: inline-block;
+  .flatpickr-calendar {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+}
+
+.flatpickr-day:hover {
+  background-color: #0077ff;
+  color: white;
+}
+
+.flatpickr-day.today {
+  border: 2px solid #0077ff;
+}
+
+.flatpickr-day.selected {
+  background-color: #333;
+  color: #fff;
+}
 }
 
 {% endstyle %}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const dateInput = document.getElementById('pickup-date');
-    if (dateInput) {
-      const today = new Date();
-      const twoWeeksLater = new Date(today.setDate(today.getDate() + 14));
-      const minDate = twoWeeksLater.toISOString().split('T')[0];
-      dateInput.min = minDate;
-    }
+    flatpickr("#pickup-date", {
+      dateFormat: "Y-m-d",
+      minDate: new Date().fp_incr(14), // 2 weeks from today
+      disable: [
+        function(date) {
+          // Disable weekends: Sunday = 0, Saturday = 6
+          return (date.getDay() === 0 || date.getDay() === 6);
+        }
+      ]
+    });
   });
 </script>
