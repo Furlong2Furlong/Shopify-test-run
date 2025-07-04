@@ -141,9 +141,6 @@
                   required
                 >
               </div>
-              {{ section.settings.minimum_days_notice }}
-{{ section.settings.available_days }}
-{{ section.settings.blackout_dates }}
 
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
@@ -208,34 +205,6 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 40
-    },{
-      "type": "range",
-      "id": "minimum_days_notice",
-      "label": "Minimum days in advance",
-      "min": 0,
-      "max": 30,
-      "default": 14
-    },
-    {
-      "type": "select",
-      "id": "available_days",
-      "label": "Available pickup days",
-      "options": [
-        { "value": "0", "label": "Sunday" },
-        { "value": "1", "label": "Monday" },
-        { "value": "2", "label": "Tuesday" },
-        { "value": "3", "label": "Wednesday" },
-        { "value": "4", "label": "Thursday" },
-        { "value": "5", "label": "Friday" },
-        { "value": "6", "label": "Saturday" }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "textarea",
-      "id": "blackout_dates",
-      "label": "Blackout dates (YYYY-MM-DD, one per line)",
-      "default": ""
     }
   ],
   "blocks": [
@@ -256,7 +225,6 @@
 }
 {% endschema %}
 
-
 <!-- ADD FLATPICKR JS BEFORE CLOSING BODY (outside all Liquid blocks) -->
 <!-- Flatpickr CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
@@ -266,23 +234,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const minDays = {{ section.settings.minimum_days_notice | default: 14 }};
-    const allowedDay = parseInt({{ section.settings.available_days | json }});
-    const blackoutDates = {{ section.settings.blackout_dates | newline_to_br | split: '<br />' | json }};
-
-    flatpickr('#pickup-date', {
-      dateFormat: "Y-m-d",
-      minDate: new Date().fp_incr(minDays),
-      disable: [
-        function (date) {
-          return date.getDay() !== allowedDay || blackoutDates.includes(date.toISOString().split('T')[0]);
-        }
-      ]
-    });
+    const pickupInput = document.getElementById('pickup-date');
+    if (pickupInput && typeof flatpickr !== 'undefined') {
+      flatpickr(pickupInput, {
+        dateFormat: "Y-m-d",
+        minDate: new Date().fp_incr(14),
+        disable: [
+          function(date) {
+            return (date.getDay() === 0 || date.getDay() === 6);
+          }
+        ]
+      });
+    } else {
+      console.warn("Flatpickr or #pickup-date not found");
+    }
   });
 </script>
-
-
 
 {% comment %} {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
