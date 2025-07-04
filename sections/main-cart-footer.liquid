@@ -25,7 +25,7 @@
     font-size: 1rem;
     border: 2px solid #333;
     border-radius: 8px;
-    background-color:rgb(236, 160, 160);
+    background-color: #f9f9f9;
     color: #222;
     width: 100%;
     max-width: 300px;
@@ -44,6 +44,50 @@
     margin-bottom: 4px;
     display: inline-block;
   }
+  /* Background and border of the calendar */
+.flatpickr-calendar {
+  background-color: #fff;        /* Calendar background */
+  border: 2px solid #0077ff;     /* Border color */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+}
+
+/* Header background */
+.flatpickr-months {
+  background-color: #0077ff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Day numbers */
+.flatpickr-day {
+  color: #333;
+}
+
+/* Hovered day */
+.flatpickr-day:hover {
+  background: #005fcc;
+  color: white;
+}
+
+/* Selected day */
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover {
+  background: #003d99;
+  color: white;
+}
+
+/* Today’s day */
+.flatpickr-day.today {
+  border: 2px solid #0077ff;
+}
+
+/* Disabled days */
+.flatpickr-day.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
 {%- endstyle -%}
 
 <div
