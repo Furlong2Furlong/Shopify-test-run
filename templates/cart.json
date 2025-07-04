@@ -21,13 +21,13 @@
       "type": "custom-pickup-calendar-settings",
       "name": "Pickup Calendar",
       "settings": {
-        "minimum_days_notice": 0,
+        "minimum_days_notice": 11,
         "allow_sunday": true,
-        "allow_monday": false,
+        "allow_monday": true,
         "allow_tuesday": true,
         "allow_wednesday": false,
-        "allow_thursday": false,
-        "allow_friday": false,
+        "allow_thursday": true,
+        "allow_friday": true,
         "allow_saturday": false,
         "blackout_dates": "2025-07-06\n2025-07-29"
       }
