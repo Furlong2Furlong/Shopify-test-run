@@ -728,6 +728,26 @@
     </script>
   </div>
 </product-info>
+{% assign artist = product.metafields.custom.artist.value %}
+
+{% if artist %}
+  <div class="product-artist">
+    <p><strong>Designed by:</strong> {{ artist.name }}</p>
+
+    {% if artist.photo %}
+      <img 
+      src="{{ artist.photo | image_url: width: 300 }}" 
+      alt="{{ artist.name }}" 
+      width="{{ artist.photo.width }}" 
+      height="{{ artist.photo.height }}" 
+      style="max-width:150px; height:auto; border-radius:8px;">
+    {% endif %}
+
+    {% if artist.bio %}
+      <p style="max-width: 600px;">{{ artist.bio }}</p>
+    {% endif %}
+  </div>
+{% endif %}
 
 {% schema %}
 {
