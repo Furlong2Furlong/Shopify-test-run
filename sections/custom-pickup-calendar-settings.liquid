@@ -179,24 +179,24 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const minDays = {{ section.settings.minimum_days_notice | default: 2 }};
-const allowedDays = [];
-{% if section.settings.allow_sunday %}allowedDays.push("0");{% endif %}
-{% if section.settings.allow_monday %}allowedDays.push("1");{% endif %}
-{% if section.settings.allow_tuesday %}allowedDays.push("2");{% endif %}
-{% if section.settings.allow_wednesday %}allowedDays.push("3");{% endif %}
-{% if section.settings.allow_thursday %}allowedDays.push("4");{% endif %}
-{% if section.settings.allow_friday %}allowedDays.push("5");{% endif %}
-{% if section.settings.allow_saturday %}allowedDays.push("6");{% endif %}
-
     const blackoutDates = {{ section.settings.blackout_dates | newline_to_br | split: '<br />' | json }};
+
+    const allowedDays = [];
+    {% if section.settings.allow_sunday %}allowedDays.push("0");{% endif %}
+    {% if section.settings.allow_monday %}allowedDays.push("1");{% endif %}
+    {% if section.settings.allow_tuesday %}allowedDays.push("2");{% endif %}
+    {% if section.settings.allow_wednesday %}allowedDays.push("3");{% endif %}
+    {% if section.settings.allow_thursday %}allowedDays.push("4");{% endif %}
+    {% if section.settings.allow_friday %}allowedDays.push("5");{% endif %}
+    {% if section.settings.allow_saturday %}allowedDays.push("6");{% endif %}
 
     flatpickr('#pickup-date', {
       dateFormat: "Y-m-d",
       minDate: new Date().fp_incr(minDays),
       disable: [
         function(date) {
-          const day = date.getDay().toString(); // convert to string for comparison
-          const dateStr = date.toISOString().split('T')[0]; // format to YYYY-MM-DD
+          const day = date.getDay().toString();
+          const dateStr = date.toISOString().split('T')[0];
           return !allowedDays.includes(day) || blackoutDates.includes(dateStr);
         }
       ]
