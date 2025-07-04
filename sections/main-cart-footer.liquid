@@ -118,6 +118,8 @@
             {%- when 'subtotal' -%}
               <!-- your subtotal block code unchanged -->
             {%- else -%}
+              {% section 'custom-pickup-calendar-settings' %}
+
               <div class="cart-pickup-wrapper" style="margin-top: 2rem;">
                 <h3>Choose Your Pickup Date & Time</h3>
                 
@@ -238,18 +240,22 @@
     if (pickupInput && typeof flatpickr !== 'undefined') {
       flatpickr(pickupInput, {
         dateFormat: "Y-m-d",
-        minDate: new Date().fp_incr(14),
+        minDate: new Date().fp_incr({{ section.settings.minimum_days_notice }}),
         disable: [
           function(date) {
-            return (date.getDay() === 0 || date.getDay() === 6);
-          }
+            // Disable all days except the allowed one
+            return date.getDay() != {{ section.settings.available_days }};
+          },
+          {% assign blackout_dates = section.settings.blackout_dates | split: '\n' %}
+          {% for date in blackout_dates %}
+            "{{ date | strip }}",
+          {% endfor %}
         ]
       });
-    } else {
-      console.warn("Flatpickr or #pickup-date not found");
     }
   });
 </script>
+
 
 {% comment %} {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
