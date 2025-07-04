@@ -1,0 +1,34 @@
+{% assign artist = shop.metafields.custom.featured_artist.value %}
+
+{% if artist %}
+  <div class="featured-artist-section" style="text-align: center; padding: 40px;">
+    <h2 class="text-xl font-bold mb-4">Featured Artist: {{ artist.name }}</h2>
+    {% if artist.photo %}
+      <img src="{{ artist.photo | image_url: width: 300 }}" alt="{{ artist.name }}" style="border-radius: 50%; margin-bottom: 20px;" width="300" height="300">
+    {% endif %}
+    <p style="max-width: 600px; margin: 0 auto 20px;">{{ artist.bio }}</p>
+    {% if artist.website %}
+      <a href="{{ artist.website }}" class="btn" target="_blank" style="color: #fff; background: #000; padding: 10px 20px; display: inline-block;">Visit Website</a>
+    {% endif %}
+    {% if artist.artwork %}
+      <div style="margin-top: 40px;">
+        <img src="{{ artist.artwork | image_url: width: 600 }}" alt="{{ artist.name }} Artwork" style="max-width: 100%;" width="600" height="400">
+      </div>
+    {% endif %}
+  </div>
+{% else %}
+  <p>No featured artist set.</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Featured Artist",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Featured Artist"
+    }
+  ]
+}
+{% endschema %}
