@@ -104,6 +104,28 @@
                 </small>
               </div>
             {%- else -%}
+              <div class="cart-pickup-wrapper" style="margin-top: 2rem;">
+  <h3>Choose Your Pickup Date & Time</h3>
+  
+  <label for="pickup-date">Pickup Date:</label><br>
+  <input
+    type="date"
+    id="pickup-date"
+    name="attributes[Pickup Date]"
+    value="{{ cart.attributes['Pickup Date'] }}"
+    required
+  ><br><br>
+
+  <label for="pickup-time">Pickup Time:</label><br>
+  <input
+    type="time"
+    id="pickup-time"
+    name="attributes[Pickup Time]"
+    value="{{ cart.attributes['Pickup Time'] }}"
+    required
+  >
+</div>
+
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
                   type="submit"
