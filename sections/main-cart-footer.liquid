@@ -1,4 +1,4 @@
-{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
@@ -249,9 +249,9 @@
       console.warn("Flatpickr or #pickup-date not found");
     }
   });
-</script>
+</script> {% endcomment %}
 
-{% comment %} {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+ {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
@@ -503,4 +503,4 @@ label {
       dateInput.min = minDate;
     }
   });
-</script> {% endcomment %}
+</script> 
