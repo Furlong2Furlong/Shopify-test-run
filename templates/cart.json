@@ -28,7 +28,8 @@
         "allow_wednesday": false,
         "allow_thursday": false,
         "allow_friday": false,
-        "allow_saturday": false
+        "allow_saturday": false,
+        "blackout_dates": "2025-07-06\n2025-07-29"
       }
     },
     "cart-footer": {
