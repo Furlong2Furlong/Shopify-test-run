@@ -1,4 +1,4 @@
-<!-- sections/pickup-calendar.liquid -->
+{% comment %} <!-- sections/pickup-calendar.liquid -->
 <!-- === ADD FLATPICKR CSS === -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 <div class="pickup-calendar">
@@ -76,6 +76,126 @@
           const day = date.getDay();
           const formatted = date.toISOString().split('T')[0];
           return day !== allowedDay || blackoutDates.includes(formatted);
+        }
+      ]
+    });
+  });
+</script> {% endcomment %}
+<!-- === ADD FLATPICKR CSS === -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+<div class="pickup-calendar">
+  <h3>Choose Pickup Date & Time</h3>
+
+  <label for="pickup-date">Pickup Date:</label><br>
+  <input
+    type="text"
+    id="pickup-date"
+    name="attributes[Pickup Date]"
+    value="{{ cart.attributes['Pickup Date'] }}"
+    placeholder="Select pickup date"
+    required
+  ><br><br>
+
+  <label for="pickup-time">Pickup Time:</label><br>
+  <input
+    type="time"
+    id="pickup-time"
+    name="attributes[Pickup Time]"
+    value="{{ cart.attributes['Pickup Time'] }}"
+    required
+  >
+</div>
+
+{% schema %}
+
+{
+  "name": "Pickup Calendar",
+  "settings": [
+    {
+      "type": "range",
+      "id": "minimum_days_notice",
+      "label": "Minimum days in advance",
+      "min": 0,
+      "max": 30,
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_sunday",
+      "label": "Allow Sunday",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_monday",
+      "label": "Allow Monday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_tuesday",
+      "label": "Allow Tuesday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_wednesday",
+      "label": "Allow Wednesday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_thursday",
+      "label": "Allow Thursday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_friday",
+      "label": "Allow Friday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_saturday",
+      "label": "Allow Saturday",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "blackout_dates",
+      "label": "Blackout dates (YYYY-MM-DD, one per line)",
+      "default": ""
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pickup Calendar"
+    }
+  ]
+}
+{% endschema %}
+
+{% endschema %}
+
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer ></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const minDays = {{ section.settings.minimum_days_notice | default: 2 }};
+    const allowedDays = {{ section.settings.available_days | json }};
+    const blackoutDates = {{ section.settings.blackout_dates | newline_to_br | split: '<br />' | json }};
+
+    flatpickr('#pickup-date', {
+      dateFormat: "Y-m-d",
+      minDate: new Date().fp_incr(minDays),
+      disable: [
+        function(date) {
+          const day = date.getDay().toString(); // convert to string for comparison
+          const dateStr = date.toISOString().split('T')[0]; // format to YYYY-MM-DD
+          return !allowedDays.includes(day) || blackoutDates.includes(dateStr);
         }
       ]
     });
