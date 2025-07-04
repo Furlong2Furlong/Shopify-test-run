@@ -163,10 +163,16 @@
         "left_title": "",
         "right_title": ""
       }
+    },
+    "custom_featured_artist_mVDELL": {
+      "type": "custom-featured-artist",
+      "name": "Featured Artist",
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
-    "custom_resto_menu_split_YRUNKB"
+    "custom_resto_menu_split_YRUNKB",
+    "custom_featured_artist_mVDELL"
   ]
 }
