@@ -36,6 +36,27 @@
       "min": 0,
       "max": 30,
       "default": 14
+    },
+    {
+      "type": "select",
+      "id": "available_days",
+      "label": "Available pickup day",
+      "options": [
+        { "value": "0", "label": "Sunday" },
+        { "value": "1", "label": "Monday" },
+        { "value": "2", "label": "Tuesday" },
+        { "value": "3", "label": "Wednesday" },
+        { "value": "4", "label": "Thursday" },
+        { "value": "5", "label": "Friday" },
+        { "value": "6", "label": "Saturday" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "textarea",
+      "id": "blackout_dates",
+      "label": "Blackout dates (YYYY-MM-DD, one per line)",
+      "default": ""
     }
   ],
   "presets": [
@@ -44,6 +65,7 @@
     }
   ]
 }
+
 {% endschema %}
 
 <!-- ADD FLATPICKR JS BEFORE CLOSING BODY (outside all Liquid blocks) -->
