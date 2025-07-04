@@ -1,10 +1,13 @@
-<div class="pickup-calendar-settings">
-  <h2>Pickup Calendar Settings</h2>
-  <!-- This section contains settings used by other sections -->
+<!-- sections/pickup-calendar.liquid -->
+<div class="pickup-calendar">
+  <h3>Choose Pickup Date & Time</h3>
+  <input type="text" id="pickup-date" name="attributes[Pickup Date]">
+  <input type="time" id="pickup-time" name="attributes[Pickup Time]">
 </div>
+
 {% schema %}
 {
-  "name": "Pickup Calendar Settings",
+  "name": "Pickup Calendar",
   "settings": [
     {
       "type": "range",
@@ -13,33 +16,13 @@
       "min": 0,
       "max": 30,
       "default": 14
-    },
-    {
-      "type": "select",
-      "id": "available_days",
-      "label": "Available pickup days",
-      "options": [
-        { "value": "0", "label": "Sunday" },
-        { "value": "1", "label": "Monday" },
-        { "value": "2", "label": "Tuesday" },
-        { "value": "3", "label": "Wednesday" },
-        { "value": "4", "label": "Thursday" },
-        { "value": "5", "label": "Friday" },
-        { "value": "6", "label": "Saturday" }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "textarea",
-      "id": "blackout_dates",
-      "label": "Blackout dates (YYYY-MM-DD, one per line)",
-      "default": ""
     }
   ],
   "presets": [
     {
-      "name": "Pickup Calendar Settings"
+      "name": "Pickup Calendar"
     }
   ]
 }
 {% endschema %}
+
