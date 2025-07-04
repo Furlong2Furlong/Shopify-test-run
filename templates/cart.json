@@ -71,7 +71,7 @@
       "type": "custom-pickup-calendar-settings",
       "name": "Pickup Calendar",
       "settings": {
-        "minimum_days_notice": 14
+        "minimum_days_notice": 8
       }
     }
   },
