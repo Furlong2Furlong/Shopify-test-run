@@ -480,7 +480,7 @@
 
 {% if artist %}
   <div class="featured-artist">
-    <h2>Featured Artist: {{ artist.name }}</h2>
+    <h2>Artist: {{ artist.name }}</h2>
     {% if artist.photo %}
       <img 
       src="{{ artist.photo | image_url: width: 300 }}" 
