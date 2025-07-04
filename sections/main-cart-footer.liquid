@@ -208,3 +208,14 @@
   ]
 }
 {% endschema %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const dateInput = document.getElementById('pickup-date');
+    if (dateInput) {
+      const today = new Date();
+      const twoWeeksLater = new Date(today.setDate(today.getDate() + 14));
+      const minDate = twoWeeksLater.toISOString().split('T')[0];
+      dateInput.min = minDate;
+    }
+  });
+</script>
